@@ -1,10 +1,10 @@
-// DESCRIPTION:
+// ❓ DESCRIPTION:
 // Your task is to sum the differences between consecutive pairs in the array in descending order.
 //
-// EXAMPLE:
+// 📌 EXAMPLE:
 // Input = [2, 1, 10] Output = 9
 //
-// SOLUTION:
+// ✅ SOLUTION:
 function sumOfDifferences(arr) {
     let reversed = arr.sort((a, b) => b - a)
     let result = []
@@ -13,3 +13,5 @@ function sumOfDifferences(arr) {
     }
     return arr.length > 1 ? result.reduce((sum, current) => sum + current) : 0
 }
+
+console.log('Output: ', sumOfDifferences([2, 1, 10]))
