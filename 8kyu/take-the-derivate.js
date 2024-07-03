@@ -8,6 +8,7 @@
 // 📌 EXAMPLE:
 // Input: (7, 8) --> Output: "56x^7"
 // Input: (5, 9) --> Output: "45x^8"
+// Input: (10, 2) --> Output: "20x^1"
 //
 // ✅ SOLUTION:
 
@@ -17,3 +18,4 @@ function derive(coefficient,exponent) {
 
 console.log('Output: ' ,derive(7,8))
 console.log('Output: ' ,derive(5, 9))
+console.log('Output: ' ,derive(10, 2))
