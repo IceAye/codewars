@@ -16,3 +16,7 @@ function getDrinkByProfession(param){
             return 'Beer'
     }
 }
+
+console.log('Output: ' , getDrinkByProfession("jabrOni"))
+console.log('Output: ' , getDrinkByProfession("scHOOl counselor"))
+console.log('Output: ' , getDrinkByProfession("pundit"))
