@@ -7,3 +7,7 @@ function solve(s){
     }
     return lower >= upper ? s.toLowerCase() : s.toUpperCase()
 }
+console.log('Output: ' , solve("code"))
+console.log('Output: ' , solve("CODe"))
+console.log('Output: ' , solve("COde"))
+console.log('Output: ' , solve("Code"))
