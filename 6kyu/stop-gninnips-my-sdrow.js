@@ -7,3 +7,7 @@ function spinWords( string ) {
     }
     return array.join(" ")
 }
+
+console.log(spinWords( "Welcome" ))
+console.log(spinWords( "Hey fellow warriors" ))
+console.log(spinWords( "This sentence is a sentence" ))
