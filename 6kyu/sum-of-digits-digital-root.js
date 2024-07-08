@@ -8,3 +8,7 @@ function digitalRoot(n) {
     }
     return n;
 }
+
+console.log(digitalRoot(16))
+console.log(digitalRoot(195))
+console.log(digitalRoot(167346))
