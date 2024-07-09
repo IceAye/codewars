@@ -14,3 +14,8 @@ function duplicateCount(text){
 
     return result
 }
+
+console.log(duplicateCount("abcde"))
+console.log(duplicateCount(""))
+console.log(duplicateCount("baaAAB"))
+console.log(duplicateCount("Indivisibility"))
