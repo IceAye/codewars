@@ -1,3 +1,7 @@
+// ❓ DESCRIPTION:
+// The following code is not giving the expected results. Can you debug what the issue is?
+//
+// ✅ SOLUTION:
 const data = [
     {name: 'Joe' , age: 20} ,
     {name: 'Bill' , age: 30} ,
