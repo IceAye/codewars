@@ -14,3 +14,7 @@ function evalObject(value){
             return  Math.pow(value.a, value.b);
     }
 }
+
+console.log('Output: ' , evalObject({a:1,b:1,operation:'+'}))
+console.log('Output: ' , evalObject({a:1,b:1,operation:'-'}))
+console.log('Output: ' , evalObject({a:1,b:1,operation:'/'}))
