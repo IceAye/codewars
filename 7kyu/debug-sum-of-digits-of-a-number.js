@@ -6,3 +6,5 @@ function getSumOfDigits(integer) {
     }
     return sum
 }
+console.log('Output: ' , getSumOfDigits(123))
+console.log('Output: ' , getSumOfDigits(223))
