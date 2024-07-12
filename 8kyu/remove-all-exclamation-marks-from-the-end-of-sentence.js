@@ -1,3 +1,7 @@
+// ❓ DESCRIPTION:
+// Remove all exclamation marks from the end of sentence.
+//
+// ✅ SOLUTION:
 function remove (string) {
     return string.replace(/!+$/, '')
 }
