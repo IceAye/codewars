@@ -7,3 +7,6 @@ function firstNonRepeatingLetter( s ) {
     }
     return ''
 }
+
+console.log('Output: ' , firstNonRepeatingLetter('sTress'))
+console.log('Output: ' , firstNonRepeatingLetter('moonmen'))
