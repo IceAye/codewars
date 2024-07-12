@@ -1,23 +1,13 @@
-function humanReadable( seconds ) {
-    let minutes = Math.floor(seconds / 60)
-    let hours = Math.floor(minutes / 60)
+function humanReadable (seconds) {
+    let minutes = Math.floor(seconds / 60) % 60
+    let hours = Math.floor(seconds / 3600)
     let sec = seconds % 60
 
-    if (minutes > 59) {
-        minutes = minutes - hours * 60
+    let startZero = function ( value ) {
+        return value < 10 ? "0" + value : value
     }
 
-    if (sec < 10) {
-        sec = "0" + sec
-    }
-    if (minutes < 10) {
-        minutes = "0" + minutes
-    }
-    if (hours < 10) {
-        hours = "0" + hours
-    }
-
-    return `${hours}:${minutes}:${sec}`
+    return `${startZero(hours)}:${startZero(minutes)}:${startZero(sec)}`
 }
 
 console.log('Output: ' , humanReadable(0))
