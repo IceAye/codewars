@@ -12,3 +12,6 @@ function hex( x ) {
 function rgb( r , g , b ) {
     return hex(r) + hex(g) + hex(b)
 }
+
+console.log('Output: ' , rgb( 300, 255, 255 ))
+console.log('Output: ' , rgb( 173, 255,  47 ))
