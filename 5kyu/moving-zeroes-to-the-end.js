@@ -8,3 +8,7 @@ function moveZeros(arr) {
     }
     return arrSorted.concat(arrZero)
 }
+
+
+console.log('Output: ' , moveZeros([1,2,0,1,0,1,0,3,0,1]))
+console.log('Output: ' , moveZeros(["a",0,0,"b","c","d",0,1,0,1,0,3,0,1,9,0,0,0,0,9]))
