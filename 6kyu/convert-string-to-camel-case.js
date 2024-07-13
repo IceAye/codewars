@@ -6,3 +6,6 @@ function toCamelCase( str ) {
     }
     return arr[0] + result
 }
+
+console.log('Output: ' , toCamelCase("the_stealth_warrior"))
+console.log('Output: ' , toCamelCase("i-am-a-programmer"))
