@@ -1,5 +1,5 @@
 function shortenToDate(longDate) {
-    return longDate.split(' ').slice(0,3).join(' ').slice(0, -1)
+    return longDate.split(',')[0]
 }
 
 console.log('Output: ' , shortenToDate("Friday May 2, 9am"))
