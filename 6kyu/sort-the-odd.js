@@ -1,20 +1,6 @@
 function sortArray(array) {
-    let result = []
-    let odd = []
-    let indices = []
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] % 2 === 0) {
-            result[i] = array[i]
-        } else {
-            odd.push(array[i])
-            indices.push(i)
-        }
-    }
-    for (let j = 0; j < odd.length; j++) {
-        odd.sort((a, b) => a - b)
-        result[indices[j]] = odd[j]
-    }
-    return result
+    const odd = array.filter((item) => item % 2 !== 0)
+    return array.map((item) => item % 2 === 0 ? item : odd.shift())
 }
 
 console.log('Output: ' , sortArray([5, 8, 6, 3, 4]))
