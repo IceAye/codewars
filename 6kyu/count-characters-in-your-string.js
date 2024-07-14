@@ -10,3 +10,5 @@ function count( string ) {
     }
     return counting
 }
+
+console.log(count('abacac'))
