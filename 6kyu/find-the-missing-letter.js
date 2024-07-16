@@ -6,3 +6,6 @@ function findMissingLetter( array ) {
         }
     }
 }
+
+console.log(findMissingLetter(['a','b','c','d','f']))
+console.log(findMissingLetter(['O','Q','R','S']))
