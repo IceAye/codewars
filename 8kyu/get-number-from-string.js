@@ -1,5 +1,5 @@
 function getNumberFromString(s) {
-    return +s.replace(/[^\d]/gi, "")
+    return +s.replace(/\D/g, "")
 }
 
 console.log(getNumberFromString("this is number: 7"))
