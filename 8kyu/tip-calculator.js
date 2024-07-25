@@ -11,3 +11,9 @@ function calculateTip(amount, rating) {
 
     return rating in tips ? Math.ceil(amount * tips[rating]) : "Rating not recognised";
 }
+
+console.log(calculateTip(20, "Excellent"));
+console.log(calculateTip(26.95, "good"));
+console.log(calculateTip(50, "poor"));
+console.log(calculateTip(20, "terrible"));
+console.log(calculateTip(10, "fuu"));
