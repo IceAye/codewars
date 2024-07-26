@@ -1,8 +1,9 @@
 function calculateAge(born, year) {
-    let count = Math.abs(year - born)
-    if (count === 0) return "You were born this very year!"
-    if (count === 1) return `You ${born < year ? "are" : "will be born in"} ${count} year${born < year ? " old" : ""}.`
-    return `You ${born < year ? "are" : "will be born in"} ${count} years${born < year ? " old" : ""}.`
+    let count = Math.abs(year - born);
+    let yearNoun = count === 1 ? "year" : "years";
+
+    if (count === 0) return "You were born this very year!";
+    return `You ${born < year ? "are" : "will be born in"} ${count} ${yearNoun}${born < year ? " old" : ""}.`;
 }
 
 console.log(calculateAge(2012, 2016));
