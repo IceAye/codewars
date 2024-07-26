@@ -1,20 +1,9 @@
 function perimeter(n) {
-    if (n === 0) {
-        return 4;
+    let [a, b] = [1, 1];
+    for (let i = 0; i <= n; i++) {
+        [a, b] = [b, a + b];
     }
-    function fib() {
-        let a = 1;
-        let b = 1;
-        let sum = 2;
-        for (let i = 3; i <= n + 1; i++) {
-            let c = a + b;
-            sum += c;
-            a = b;
-            b = c;
-        }
-        return sum;
-    }
-    return 4 * fib(n);
+    return 4 * (b - 1);
 }
 
 console.log(perimeter(0));
