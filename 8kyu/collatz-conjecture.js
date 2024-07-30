@@ -1,13 +1,9 @@
-let hotpo = function (n) {
+let hotpo = function ( n ) {
     let result = 0;
-    let number = n;
-    while (number > 1) {
-        if (number % 2 === 0) {
-            number = number / 2;
-        } else if (number % 2 !== 0) {
-            number = 3 * number + 1;
-        }
+
+    while (n > 1) {
         result++;
+        n = n % 2 === 0 ? n / 2 : 3 * n + 1;
     }
     return result;
 };
