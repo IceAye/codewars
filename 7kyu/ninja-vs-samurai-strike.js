@@ -1,3 +1,7 @@
+// ❓ DESCRIPTION:
+// Something is wrong with our Warrior class. The strike method does not work correctly.
+//
+// ✅ SOLUTION:
 let Warrior = function(name){
     this.name = name;
     this.health = 100;
