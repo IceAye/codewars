@@ -1,8 +1,7 @@
 function remove(s, n) {
-    let i = 0;
-    while (i < n) {
+    while (n) {
         s = s.replace(/!/, "");
-        i++;
+        n--;
     }
     return s;
 }
