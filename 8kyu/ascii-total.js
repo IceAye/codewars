@@ -1,9 +1,5 @@
 function uniTotal(string) {
-    let sum = 0;
-    for (let i = 0; i < string.length; i++) {
-        sum += string.codePointAt(i);
-    }
-    return sum;
+    return [...string].reduce((sum, item) => sum + item.charCodeAt(0), 0);
 }
 
 console.log(uniTotal(""));
