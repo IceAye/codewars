@@ -4,7 +4,7 @@ function factorial(n) {
     }
 
     let array = Array.from({ length: n }, (_, index) => index + 1);
-    return array.reduce((mult, current) => mult * current, 1);
+    return n < 2 ? 1 : array.reduce((mult, current) => mult * current);
 }
 
 console.log(factorial(0));
