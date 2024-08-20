@@ -1,8 +1,8 @@
 function evaporator(content, evap_per_day, threshold) {
-    let base = content * (threshold / 100);
     let days = 0;
-    while (content >= base) {
-        content -= content * (evap_per_day / 100);
+    let totalContent = 100;
+    while (totalContent >= threshold) {
+        totalContent -= totalContent * (evap_per_day / 100);
         days++;
     }
     return days;
