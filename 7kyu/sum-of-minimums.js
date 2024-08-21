@@ -1,11 +1,5 @@
 function sumOfMinimums(arr) {
-    let sum = 0;
-
-    for (const row of arr) {
-        sum += Math.min(...row);
-    }
-
-    return sum;
+    return arr.reduce((sum, current) => sum + Math.min(...current), 0);
 }
 
 console.log(
