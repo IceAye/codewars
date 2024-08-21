@@ -1,5 +1,5 @@
 function countSquares(cuts) {
-    return cuts === 0 ? 1 : Math.pow(cuts + 1, 2) * 2 + (cuts - 1) * cuts * 4;
+    return cuts === 0 ? 1 : 6 * Math.pow(cuts, 2) + 2;
 }
 
 console.log(countSquares(0));
