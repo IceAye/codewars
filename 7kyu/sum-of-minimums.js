@@ -1,3 +1,10 @@
+// ❓ DESCRIPTION:
+// Given a 2D ( nested ) list ( array, vector, .. ) of size m * n, your task is to find the sum of the minimum values in each row.
+// Note: You will always be given a non-empty list containing positive values.
+//
+// ENJOY CODING :)
+//
+// ✅ SOLUTION:
 function sumOfMinimums(arr) {
     return arr.reduce((sum, current) => sum + Math.min(...current), 0);
 }
