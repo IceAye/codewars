@@ -1,3 +1,7 @@
+// ❓ DESCRIPTION:
+// Your task is to write function factorial.
+//
+// ✅ SOLUTION:
 function factorial(n) {
     let sum = 1;
 
