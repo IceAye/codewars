@@ -1,14 +1,11 @@
 function padIt(str, n) {
-    let start = "";
-    let end = "";
-    let i = 1;
-    while (i <= n) {
-        if (i % 2 !== 0) {
-            start += "*";
-        } else end += "*";
-        i++;
+    while (n > 0) {
+        if (n % 2 === 0) {
+            str = str + "*"
+        } else str = "*" + str;
+        n--;
     }
-    return start + str + end;
+    return str;
 }
 
 console.log(padIt("a", 1));
