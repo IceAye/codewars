@@ -6,6 +6,11 @@ const cannonsReady = (gunners) => {
     return "Fire!";
 };
 
+// SOLUTION 2:
+const cannonsReady = (gunners) => {
+    return Object.values(gunners).every(item => item === "aye") ? "Fire!" : "Shiver me timbers!";
+};
+
 console.log(
     cannonsReady({ Mike: "aye", Joe: "aye", Johnson: "aye", Peter: "aye" }),
 );
