@@ -1,4 +1,7 @@
-// SOLUTION 1:
+// ❓ DESCRIPTION:
+// Given two arrays of strings a1 and a2 return a sorted array r in lexicographical order of the strings of a1 which are substrings of strings of a2.
+//
+// ✅ SOLUTION 1:
 function inArray(array1,array2){
     let result = [];
 
@@ -8,7 +11,7 @@ function inArray(array1,array2){
     }
     return result.sort();
 }
-// SOLUTION 2:
+// ✅ SOLUTION 2:
 function inArray(array1, array2) {
     return array1
         .filter((string1) => array2.find((string2) => string2.match(string1)))
