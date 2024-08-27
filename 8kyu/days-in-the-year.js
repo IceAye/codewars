@@ -1,6 +1,5 @@
 function yearDays(year) {
-    let zeroCenture = /00/g.test(year);
-    return `${year} has ${year % 400 === 0 || !zeroCenture && year % 4 === 0 ? 366 : 365} days`;
+    return `${year} has ${year % 400 === 0 || year % 100 !== 0 && year % 4 === 0 ? 366 : 365} days`;
 }
 
 console.log(yearDays(0));
