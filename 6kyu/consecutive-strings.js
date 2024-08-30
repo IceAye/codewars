@@ -1,4 +1,7 @@
-// SOLUTION 1:
+// ❓ DESCRIPTION:
+// You are given an array(list) strarr of strings and an integer k. Your task is to return the first longest string consisting of k consecutive strings taken in the array.
+//
+// ✅ SOLUTION 1:
 function longestConsec(strarr, k) {
     if (strarr.length < k) return "";
     let count = new Map();
@@ -15,7 +18,7 @@ function longestConsec(strarr, k) {
     }
 }
 
-// SOLUTION 2:
+// ✅ SOLUTION 2:
 function longestConsec(strarr, k) {
     if (strarr.length < k || k <= 0) return "";
     return strarr
