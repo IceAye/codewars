@@ -1,3 +1,4 @@
+// SOLUTION 1:
 function longestConsec(strarr, k) {
     if (strarr.length < k) return "";
     let count = new Map();
@@ -12,6 +13,14 @@ function longestConsec(strarr, k) {
     for (const [key, value] of count.entries()) {
         if (value === max) return key;
     }
+}
+
+// SOLUTION 2:
+function longestConsec(strarr, k) {
+    if (strarr.length < k || k <= 0) return "";
+    return strarr
+        .map((item, index) => strarr.slice(index, index + k).join(""))
+        .reduce((longest, current) => (current.length > longest.length ? current : longest));
 }
 
 console.log(
