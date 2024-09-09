@@ -1,3 +1,7 @@
+// ❓ DESCRIPTION:
+// Write the function circleArea/CircleArea which takes in a Circle object and calculates the area of that circle.
+//
+// ✅ SOLUTION:
 function circleArea(circle){
     return Math.PI * circle.radius**2
 }
