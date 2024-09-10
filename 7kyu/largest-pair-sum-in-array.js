@@ -1,3 +1,7 @@
+// ❓ DESCRIPTION:
+// Given a sequence of numbers, find the largest pair sum in the sequence.
+//
+// ✅ SOLUTION:
 function largestPairSum(numbers) {
     numbers.sort((a, b) => b - a);
     return numbers[0] + numbers[1];
