@@ -1,3 +1,4 @@
+// SOLUTION 1:
 function evil(n) {
     let binaryNumber = n.toString(2);
     let count = 0;
@@ -6,6 +7,11 @@ function evil(n) {
         if (+digit === 1) count++;
     }
     return count % 2 === 0 ? "It's Evil!" : "It's Odious!";
+}
+
+// SOLUTION 2:
+function evil(n) {
+    return n.toString(2).match(/1/g).length % 2 === 0 ? "It's Evil!" : "It's Odious!";
 }
 
 console.log(evil(1));
