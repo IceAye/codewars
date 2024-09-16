@@ -1,3 +1,7 @@
+// ❓ DESCRIPTION:
+// Given an array of Boolean values and a logical operator, return a Boolean result based on sequentially applying the operator to the values in the array.
+//
+// ✅ SOLUTION:
 function logicalCalc(array, op){
     if (op === "AND") return array.reduce((acc, current) => acc && current);
     if (op === "OR") return array.reduce((acc, current) => acc || current);
