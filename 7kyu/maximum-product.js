@@ -1,4 +1,7 @@
-// SOLUTION 1:
+// ❓ DESCRIPTION:
+// Given an array of integers , Find the maximum product obtained from multiplying 2 adjacent numbers in the array.
+//
+// ✅ SOLUTION 1:
 function adjacentElementsProduct(array) {
     return Math.max(...(array.map((item, index, array) => item * array[index + 1])).slice(0, -1))
 }
