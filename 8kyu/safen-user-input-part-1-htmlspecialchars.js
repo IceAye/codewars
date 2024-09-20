@@ -1,3 +1,12 @@
+// ❓ DESCRIPTION:
+// Your mission is to implement a function that converts the following potentially harmful characters:
+//
+// < --> &lt;
+// > --> &gt;
+// " --> &quot;
+// & --> &amp;
+//
+// ✅ SOLUTION:
 function htmlspecialchars(formData) {
     const stack = {
         '<': '&lt;',
