@@ -1,3 +1,4 @@
+// SOLUTION 1:
 function toWeirdCase(string) {
     let array = string.split(" ");
     let result = [];
@@ -9,6 +10,21 @@ function toWeirdCase(string) {
         result.push(temp);
     }
     return result.join(" ");
+}
+
+// SOLUTION 2:
+function toWeirdCase(string) {
+    return string
+        .split(" ")
+        .map((word) =>
+            word
+                .split("")
+                .map((letter, index) =>
+                    index % 2 === 0 ? letter.toUpperCase() : letter.toLowerCase(),
+                )
+                .join(""),
+        )
+        .join(" ");
 }
 
 console.log(toWeirdCase('This is a test'))
