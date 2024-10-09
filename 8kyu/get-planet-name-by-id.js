@@ -1,5 +1,12 @@
+// ❓ DESCRIPTION:
+// The function is not returning the correct values. Can you figure out why?
+//
+// 📌 EXAMPLE:
+// 3 --> "Earth"
+//
+// ✅ SOLUTION:
 function getPlanetName(id){
-    var name;
+    let name;
     switch(id){
         case 1:
             name = 'Mercury';
