@@ -1,5 +1,6 @@
-const abc = "abcdefghijklmnopqrstuvwxyz"
+
 // SOLUTION 1:
+const abc = "abcdefghijklmnopqrstuvwxyz"
 function solve(arr) {
     let result = [];
     for (const word of arr) {
@@ -18,6 +19,19 @@ function solve(arr) {
         [...item.toLowerCase()].reduce(
             (acc, curr, index) => acc + (curr.charCodeAt() == index + 97), 0
         ),
+    );
+}
+
+// SOLUTION 3:
+const abc = "abcdefghijklmnopqrstuvwxyz";
+
+function solve(arr) {
+    return arr.map(
+        (char) =>
+            char
+                .toLowerCase()
+                .split("")
+                .filter((c, i) => i === abc.indexOf(c)).length,
     );
 }
 
