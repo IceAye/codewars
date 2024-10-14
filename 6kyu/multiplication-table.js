@@ -1,3 +1,7 @@
+// ❓ DESCRIPTION:
+// Your task, is to create N×N multiplication table, of size provided in parameter.
+//
+// ✅ SOLUTION:
 multiplicationTable = function (size) {
     let result = [];
     for (let i = 1; i <= size; i++) {
@@ -10,4 +14,5 @@ multiplicationTable = function (size) {
     return result;
 };
 
+// ❓ TESTCASE:
 console.log(multiplicationTable(3));
