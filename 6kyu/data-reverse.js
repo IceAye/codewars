@@ -1,3 +1,4 @@
+// SOLUTION 1:
 function dataReverse(data) {
     return data.length === 0
         ? 0
@@ -9,6 +10,15 @@ function dataReverse(data) {
                 .join(""),
             Number,
         );
+}
+
+// SOLUTION 2:
+function dataReverse(data) {
+    let result = [];
+    while (data.length > 0) {
+        result.push(...data.splice(-8));
+    }
+    return result;
 }
 
 console.log(
