@@ -1,3 +1,4 @@
+// SOLUTION 1:
 function repeats(arr) {
     let map = new Map();
     for (let i = 0; i < arr.length; i++) {
@@ -10,6 +11,11 @@ function repeats(arr) {
     }
 
     return count
+}
+
+// SOLUTION 2:
+function repeats(arr){
+    return arr.filter(item => arr.indexOf(item) === arr.lastIndexOf(item)).reduce((acc, curr) => acc + curr, 0);
 }
 
 console.log(repeats([4, 5, 7, 5, 4, 8]));
