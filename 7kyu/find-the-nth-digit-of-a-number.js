@@ -9,7 +9,6 @@
 // ✅ SOLUTION:
 function findDigit(num, nth) {
     if (nth <= 0) return -1;
-    let number = Array.from(Math.abs(num).toString(), Number).reverse()[nth - 1];
     return Array.from(Math.abs(num).toString(), Number).reverse()[nth - 1] || 0;
 }
 
