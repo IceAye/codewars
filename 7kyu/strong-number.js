@@ -1,3 +1,9 @@
+// ❓ DESCRIPTION:
+// Strong number is a number with the sum of the factorial of its digits is equal to the number itself.
+// For example, 145 is strong, because 1! + 4! + 5! = 1 + 24 + 120 = 145.
+// Given a positive number, find if it is strong or not, and return either "STRONG!!!!" or "Not Strong !!".
+//
+// ✅ SOLUTION:
 function strong(n) {
     let array = Array.from(String(n), Number);
 
@@ -16,6 +22,7 @@ function strong(n) {
         : "Not Strong !!"
 }
 
+// 📌 TESTCASE:
 console.log(strong(1)); // "STRONG!!!!"
 console.log(strong(2)); // "STRONG!!!!"
 console.log(strong(145)); // "STRONG!!!!"
