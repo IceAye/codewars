@@ -1,3 +1,12 @@
+// ❓ DESCRIPTION:
+// Your task is to add up letters to one letter.
+// The function will be given a variable amount of arguments, each one being a letter to add.
+// Notes:
+// Letters will always be lowercase.
+// Letters can overflow (see second to last example of the description)
+// If no letters are given, the function should return 'z'
+//
+// ✅ SOLUTION:
 function addLetters(letters) {
     const abc = "0abcdefghijklmnopqrstuvwxyz";
     let count = letters.reduce((acc, curr) => acc + abc.indexOf(curr), 0)
@@ -5,6 +14,8 @@ function addLetters(letters) {
     return count ? abc.charAt(count) : "z"
 }
 
+
+// 📌 TESTCASE:
 console.log(addLetters(['a', 'b', 'c'])) // 'f'
 console.log(addLetters(['z'])) // 'z'
 console.log(addLetters(['a', 'b'])) // 'c'
