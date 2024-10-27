@@ -7,13 +7,18 @@
 // If no letters are given, the function should return 'z'
 //
 // ✅ SOLUTION:
-function addLetters(letters) {
+function addLetters(...letters) {
     const abc = "0abcdefghijklmnopqrstuvwxyz";
     let count = letters.reduce((acc, curr) => acc + abc.indexOf(curr), 0)
     while (count > 26)  count -= 26
     return count ? abc.charAt(count) : "z"
 }
 
+// ✅ SOLUTION 2:
+
+function addLetters(...letters) {
+    return String.fromCharCode((letters.reduce((acc, curr) => acc + curr.charCodeAt(0) - 96, 0) + 25) % 26 + 97);
+}
 
 // 📌 TESTCASE:
 console.log(addLetters(['a', 'b', 'c'])) // 'f'
