@@ -1,3 +1,10 @@
+// ❓ DESCRIPTION:
+// Given an array/list [] of n integers , find maximum triplet sum in the array Without duplications .
+// Array/list size is at least 3 .
+// Array/list numbers could be a mixture of positives , negatives and zeros .
+// Repetition of numbers in the array/list could occur , So (duplications are not included when summing).
+//
+// ✅ SOLUTION:
 function maxTriSum(numbers) {
     return [...new Set(numbers)]
         .sort((a, b) => b - a)
@@ -5,7 +12,7 @@ function maxTriSum(numbers) {
         .reduce((acc, curr) => acc + curr, 0);
 }
 
-
+// 📌 TESTCASE:
 console.log(maxTriSum([3,2,6,8,2,3])) // 17
 console.log(maxTriSum([2,9,13,10,5,2,9,5])) // 32
 console.log(maxTriSum([2,1,8,0,6,4,8,6,2,4])) // 18
