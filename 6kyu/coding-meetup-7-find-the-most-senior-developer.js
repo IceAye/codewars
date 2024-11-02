@@ -1,5 +1,11 @@
+// SOLUTION 1:
 function findSenior(list) {
     return list.sort((a, b) => a.age - b.age).filter(item => item.age === list.at(-1).age)
+}
+
+// SOLUTION 2:
+function findSenior(list) {
+    return list.filter(person => person.age === Math.max(...list.map(person => person.age)));
 }
 
 let list1 = [
