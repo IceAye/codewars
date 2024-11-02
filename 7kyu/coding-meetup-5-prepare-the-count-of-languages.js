@@ -1,9 +1,17 @@
+// SOLUTION 1:
 function countLanguages(list) {
     let map = new Map();
     list.map(item => map.set(item.language, map.get(item.language) + 1 || 1));
     return Object.fromEntries(map);
 }
 
+// SOLUTION 2 (with reducer):
+function countLanguages(list) {
+    return list.reduce((acc, curr) => {
+        acc.hasOwnProperty(curr.language) ? acc[curr.language] += 1 : acc[curr.language] = 1;
+        return acc;
+    }, {})
+}
 
 let list1 = [
     { firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'C' },
