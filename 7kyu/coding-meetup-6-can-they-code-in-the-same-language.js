@@ -1,3 +1,10 @@
+// ❓ DESCRIPTION:
+// You will be given an array of objects (associative arrays in PHP, tables in COBOL) representing data about developers who have signed up to attend the next coding meetup that you are organising.
+// Your task is to return either:
+// true if all developers in the list code in the same language; or
+// false otherwise.
+//
+// ✅ SOLUTION:
 function isSameLanguage(list) {
     return list.every(item => item.language === list[0].language);
 }
@@ -15,5 +22,6 @@ let list2 = [
     { firstName: 'Maria', lastName: 'I.', country: 'Greece', continent: 'Europe', age: 32, language: 'C' },
 ];
 
+// 📌 TESTCASE:
 console.log(isSameLanguage(list1)) // true
 console.log(isSameLanguage(list2)) // false
