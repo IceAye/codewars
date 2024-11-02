@@ -1,7 +1,15 @@
+// ❓ DESCRIPTION:
+// You will be given a sequence of objects (associative arrays in PHP) representing data about developers who have signed up to attend the next coding meetup that you are organising.
+// Your task is to return:
+// true if all of the following continents / geographic zones will be represented by at least one developer: 'Africa', 'Americas', 'Asia', 'Europe', 'Oceania'.
+// false otherwise.
+//
+// ✅ SOLUTION:
 function allContinents(list) {
     return new Set(list.map(person => person.continent)).size === 5;
 }
 
+// 📌 TESTCASE:
 let list1 = [
     {
         firstName: "Fatima",
