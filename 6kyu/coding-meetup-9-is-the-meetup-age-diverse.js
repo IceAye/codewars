@@ -1,3 +1,10 @@
+// ❓ DESCRIPTION:
+// You will be given an array of objects (associative arrays in PHP) representing data about developers who have signed up to attend the next coding meetup that you are organising.
+// Your task is to return:
+// true if developers from all of the following age groups have signed up: teens, twenties, thirties, forties, fifties, sixties, seventies, eighties, nineties, centenarian (at least 100 years young).
+// false otherwise.
+//
+// ✅ SOLUTION:
 function isAgeDiverse(list) {
     if (list.length < 10) return false;
     return list.reduce((acc, curr) => {
@@ -15,6 +22,7 @@ function isAgeDiverse(list) {
     }, [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]).every(el => el !== 0);
 }
 
+// 📌 TESTCASE:
 const list1 = [
     { firstName: 'Harry', lastName: 'K.', country: 'Brazil', continent: 'Americas', age: 19, language: 'Python' },
     { firstName: 'Kseniya', lastName: 'T.', country: 'Belarus', continent: 'Europe', age: 29, language: 'JavaScript' },
