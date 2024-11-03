@@ -1,7 +1,12 @@
+// ❓ DESCRIPTION:
+// Given an array/list [] of integers , Find the product of the k maximal numbers.
+//
+// ✅ SOLUTION:
 function maxProduct(numbers, size){
     return numbers.sort((a, b) => b - a).slice(0, size).reduce((acc, curr) => acc * curr);
 }
 
+// 📌 TESTCASE:
 console.log(maxProduct([4,3,5], 2)) // 20
 console.log(maxProduct([10,8,7,9], 3)) // 720
 console.log(maxProduct([8,6,4,6], 3)) // 288
