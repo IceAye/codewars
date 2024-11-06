@@ -1,7 +1,12 @@
+// ❓ DESCRIPTION:
+// Define a method/function that removes from a given array of integers all the values contained in a second array.
+//
+// ✅ SOLUTION:
 Array.prototype.remove_ = function(integer_list, values_list){
     return integer_list.filter(item => !values_list.includes(item));
 }
 
+// 📌 TESTCASE:
 let l = new Array();
 console.log(l.remove_([1, 1, 2 ,3 ,1 ,2 ,3 ,4], [1, 3])) // [2, 2, 4]
 console.log(l.remove_([1, 1, 2 ,3 ,1 ,2 ,3 ,4, 4, 3 ,5, 6, 7, 2, 8], [1, 3, 4, 2])) // [5, 6 ,7 ,8]
