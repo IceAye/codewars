@@ -1,3 +1,7 @@
+// ❓ DESCRIPTION:
+// Oh no, Timmy's created an infinite loop! Help Timmy find and fix the bug in his unfinished for loop!
+//
+// ✅ SOLUTION:
 function createArray(number){
     var newArray = [];
 
