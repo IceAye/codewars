@@ -1,3 +1,9 @@
+// ❓ DESCRIPTION:
+// Given an array of integers of any length, return an array that has 1 added to the value represented by the array.
+// If the array is invalid (empty, or contains negative integers or integers with more than 1 digit), return nil (or your language's equivalent).
+//
+// ✅ SOLUTION:
+
 function upArray(arr){
     if (arr.some(item => item < 0 || item > 9) || arr.length === 0) return null;
     if (arr.every(item => item === 9)) arr.unshift(0);
@@ -12,6 +18,7 @@ function upArray(arr){
     }
 }
 
+// 📌 TESTCASE:
 console.log(upArray([4,3,2,5])) // [4,3,2,6]
 console.log(upArray([2,3,9,9])) // [2,4,0,0]
 console.log(upArray(    [9,9])) //   [1,0,0]
