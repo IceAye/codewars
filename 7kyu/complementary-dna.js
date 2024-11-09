@@ -1,3 +1,8 @@
+// ❓ DESCRIPTION:
+// Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells and carries the "instructions" for the development and functioning of living organisms.
+// In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". Your function receives one side of the DNA (string, except for Haskell); you need to return the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
+//
+// ✅ SOLUTION:
 function dnaStrand(dna){
     let strand = '';
     for (let letter of dna) {
@@ -8,3 +13,11 @@ function dnaStrand(dna){
     }
     return strand;
 }
+
+// 📌 TESTCASE:
+console.log(dnaStrand("AAAA")) //"TTTT"
+console.log(dnaStrand("ATTGC")) //"TAACG"
+console.log(dnaStrand("GTAT")) //"CATA"
+console.log(dnaStrand("AAGG")) //"TTCC"
+console.log(dnaStrand("CGCG")) //"GCGC"
+console.log(dnaStrand("ATTGC")) //"TAACG"
