@@ -1,9 +1,15 @@
+// SOLUTION 1:
 function arrayLeaders(numbers){
     let result = [];
     for (let i = 0; i < numbers.length; i++) {
         if (numbers.slice(i + 1).reduce((acc, curr) => acc + curr, 0) < numbers[i]) result.push(numbers[i]);
     }
     return result;
+}
+
+// SOLUTION 2:
+function arrayLeaders(numbers){
+    return numbers.filter((item, index) => numbers.slice(index + 1).reduce((acc, curr) => acc + curr, 0) < item);
 }
 
 console.log(arrayLeaders([1,2,3,4,0])) // [4]
