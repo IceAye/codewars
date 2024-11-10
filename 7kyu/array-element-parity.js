@@ -1,5 +1,11 @@
+// SOLUTION 1:
 function solve(arr){
     return arr.find(item => !arr.includes(-item))
+}
+
+// SOLUTION 2:
+function solve(arr){
+    return [...new Set(arr)].reduce((acc, curr) => acc + curr);
 }
 
 console.log(solve([1,-1,2,-2,3])) // 3
