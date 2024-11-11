@@ -1,4 +1,12 @@
-// SOLUTION 1:
+// ❓ DESCRIPTION:
+// Input
+// a string strng
+// an array of strings arr
+// Output of function contain_all_rots(strng, arr) (or containAllRots or contain-all-rots):
+// a boolean true if all rotations of strng are included in arr
+// false otherwise
+//
+// ✅ SOLUTION 1:
 function containAllRots(strng, arr) {
     if (strng === "") return true;
     let rotation = [strng];
@@ -8,7 +16,7 @@ function containAllRots(strng, arr) {
     return rotation.every(item => arr.includes(item));
 }
 
-// SOLUTION 2:
+// ✅ SOLUTION 2:
 function containAllRots(strng, arr) {
     for (let i = 0; i < strng.length; i++) {
         if (arr.indexOf(strng.slice(i) + strng.slice(0, i)) === -1) {
@@ -18,6 +26,7 @@ function containAllRots(strng, arr) {
     return true;
 }
 
+// 📌 TESTCASE:
 console.log(containAllRots("", [])) // true
 console.log(containAllRots("", ["bsjq", "qbsj"])) // true
 console.log(containAllRots("bsjq", ["bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs"])) // true
