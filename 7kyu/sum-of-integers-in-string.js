@@ -1,7 +1,13 @@
+// ❓ DESCRIPTION:
+// Your task in this kata is to implement a function that calculates the sum of the integers inside a string. For example, in the string "The30quick20brown10f0x1203jumps914ov3r1349the102l4zy dog", the sum of the integers is 3635.
+// Note: only positive integers will be tested.
+//
+// ✅ SOLUTION:
 function sumOfIntegersInString(s) {
     return s.split(/\D/).reduce((acc, curr) => acc + +curr, 0);
 }
 
+// 📌 TESTCASE:
 console.log(sumOfIntegersInString("12.4")) // 16
 console.log(sumOfIntegersInString("h3ll0w0rld")) // 3
 console.log(sumOfIntegersInString("2 + 3 = ")) // 5
