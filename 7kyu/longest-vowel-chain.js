@@ -1,3 +1,4 @@
+// SOLUTION 1:
 function solve(s){
     let array = [];
     for (let i = 0; i < s.length; i++) {
@@ -9,6 +10,23 @@ function solve(s){
     for (const item of result) {
         if (item !== " ") {
             max = Math.max(max, item.length)
+        }
+    }
+    return max;
+}
+
+// SOLUTION 2:
+function solve(s) {
+    let current = 0;
+    let max = 0;
+    for (let i = 0; i < s.length; ++i) {
+        if ("aeiou".includes(s[i])) {
+            current++;
+            if (current > max) {
+                max = current;
+            }
+        } else {
+            current = 0;
         }
     }
     return max;
