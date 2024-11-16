@@ -1,7 +1,13 @@
+// ❓ DESCRIPTION:
+// When provided with a String, capitalize all vowels
+// Note: Y is not a vowel in this kata.
+//
+// ✅ SOLUTION:
 function swap (string) {
     return string.replace(/[euioa]/g, c => c.toUpperCase());
 }
 
+// 📌 TESTCASE:
 console.log(swap("")) // ""
 console.log(swap("   @@@")) // "   @@@"
 console.log(swap("HelloWorld!")) // "HEllOWOrld!"
