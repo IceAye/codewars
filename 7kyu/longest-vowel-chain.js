@@ -1,4 +1,8 @@
-// SOLUTION 1:
+// ❓ DESCRIPTION:
+// The vowel substrings in the word codewarriors are o,e,a,io. The longest of these has a length of 2. Given a lowercase string that has alphabetic characters only (both vowels and consonants) and no spaces, return the length of the longest vowel substring. Vowels are any of aeiou.
+// Good luck!
+//
+// ✅ SOLUTION 1:
 function solve(s){
     let array = [];
     for (let i = 0; i < s.length; i++) {
@@ -15,7 +19,7 @@ function solve(s){
     return max;
 }
 
-// SOLUTION 2:
+// ✅ SOLUTION 2:
 function solve(s) {
     let current = 0;
     let max = 0;
@@ -32,6 +36,7 @@ function solve(s) {
     return max;
 }
 
+// 📌 TESTCASE:
 console.log(solve("codewarriors"))//  2
 console.log(solve("suoidea")) // 3
 console.log(solve("ultrarevolutionariees")) // 3
