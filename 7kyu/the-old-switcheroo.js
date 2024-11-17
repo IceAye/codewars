@@ -1,9 +1,15 @@
+// SOLUTION 1:
 function vowel2index(str) {
     let newString = "";
     for (let i = 0; i < str.length; i++) {
         /[euioa]/i.test(str[i]) ? newString += i + 1 : newString += str[i];
     }
     return newString;
+}
+
+// SOLUTION 2:
+function vowel2index(str) {
+    return str.replace(/[aeiou]/ig, (c, i) => i + 1);
 }
 
 console.log(vowel2index('this is my string')) // 'th3s 6s my str15ng'
