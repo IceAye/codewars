@@ -1,3 +1,4 @@
+// SOLUTION 1:
 function productArray(numbers){
     let result = [];
     for (const number of numbers) {
@@ -5,6 +6,11 @@ function productArray(numbers){
         result.push(prod);
     }
     return result;
+}
+
+// SOLUTION 2:
+function productArray(numbers){
+    return numbers.map(number => numbers.reduce((acc,curr) => acc * curr) / number)
 }
 
 console.log(productArray([12,20])) // [20,12]
