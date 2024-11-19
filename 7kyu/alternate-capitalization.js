@@ -1,3 +1,9 @@
+// ❓ DESCRIPTION:
+// Given a string, capitalize the letters that occupy even indexes and odd indexes separately, and return as shown below. Index 0 will be considered even.
+// The input will be a lowercase string with no spaces.
+// Good luck!
+//
+// ✅ SOLUTION:
 function capitalize(s){
     let firstCap = ''
     let secondCap = ''
