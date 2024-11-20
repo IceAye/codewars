@@ -14,3 +14,7 @@ function riders(stations) {
     }
     return totalRiders
 }
+
+function riders(stations, number = 100) {
+    return stations.map( el => number + el > 100 ? [100, number = el][0] : [0, number += el]).filter(e => e >= 100).length
+}
