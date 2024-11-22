@@ -1,3 +1,9 @@
+// ❓ DESCRIPTION:
+// In Hong Kong, a valid phone number has the format xxxx xxxx where x is a decimal digit (0-9). For example:
+// Define two functions, isValidHKPhoneNumber and hasValidHKPhoneNumber, that returns whether a given string is a valid HK phone number and contains a valid HK phone number respectively (i.e. true/false values).
+// If in doubt please refer to the example tests.
+//
+// ✅ SOLUTION:
 const isValidHKPhoneNumber = (number) => {
     return /^\d{4}\s\d{4}$/g.test(number)
 }
@@ -6,6 +12,7 @@ const hasValidHKPhoneNumber = (number) => {
     return /\d{4}\s\d{4}/g.test(number)
 }
 
+// 📌 TESTCASE:
 console.log(isValidHKPhoneNumber("1234 5678")) // true
 console.log(isValidHKPhoneNumber("3857  4756")) // false
 console.log(isValidHKPhoneNumber("sklfjsdklfjsf")) // false
