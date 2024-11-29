@@ -8,4 +8,8 @@ function decode(str) {
     return [...str].map(word => word.replace(/[a-z]/g, c => abc[25 - abc.indexOf(c)])).join('');
 }
 
+function decode(str) {
+    return str.replace(/[a-z]/g, c => String.fromCharCode(219 - c.charCodeAt()));
+}
+
 console.log(decode("I dlfow orpv gl rmgviervd lm Mlmwzb nlimrmt!")) // "I would like to interview on Monday morning!"
