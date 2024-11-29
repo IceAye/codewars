@@ -7,6 +7,12 @@ Object.defineProperty(Array.prototype, 'numberOfOccurrences',{
     }
 });
 
+Object.defineProperty(Array.prototype, 'numberOfOccurrences',{
+    value : function numberOfOccurrences(element) {
+        return this.filter(item => item === element).length;
+    }
+});
+
 const arr = [0, 1, 2, 2, 3];
 console.log(arr.numberOfOccurrences(0)) // 1
 console.log(arr.numberOfOccurrences(4)) // 0
