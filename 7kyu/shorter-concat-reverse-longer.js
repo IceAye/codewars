@@ -9,6 +9,12 @@ function shorterReverseLonger(a, b) {
     return result;
 }
 
+function shorterReverseLonger(a,b) {
+    let long = a.length >= b.length ? a : b;
+    let short = a.length >= b.length ? b : a;
+    return short + [...long].reverse().join("") + short;
+}
+
 console.log(shorterReverseLonger("first", "abcde")) // "abcdetsrifabcde"
 console.log(shorterReverseLonger("hello", "bau"  )) // "bauollehbau"
 console.log(shorterReverseLonger("fghi",  "abcde")) // "fghiedcbafghi"
