@@ -12,6 +12,14 @@ function combine(...args) {
     return result;
 }
 
+function combine(...args) {
+    return args.reduce((acc, obj) => {
+        for (const key in obj) {
+            acc[key] = key in acc ? acc[key] + obj[key] : obj[key]
+        };
+        return acc;
+    }, {});
+}
 
 const objA = { a: 10, b: 20, c: 30 }
 const objB = { a: 3, c: 6, d: 3 }
