@@ -1,3 +1,8 @@
+// ❓ DESCRIPTION:
+// Your task is to write a function that takes two or more objects and returns a new object which combines all the input objects.
+// All input object properties will have only numeric values. Objects are combined together so that the values of matching keys are added together.
+//
+// ✅ SOLUTION 1:
 function combine(...args) {
     const result = {};
     args.forEach((value, index, arr) => {
@@ -12,6 +17,7 @@ function combine(...args) {
     return result;
 }
 
+// ✅ SOLUTION 2:
 function combine(...args) {
     return args.reduce((acc, obj) => {
         for (const key in obj) {
@@ -21,6 +27,7 @@ function combine(...args) {
     }, {});
 }
 
+// 📌 TESTCASE:
 const objA = { a: 10, b: 20, c: 30 }
 const objB = { a: 3, c: 6, d: 3 }
 const objC = { a: 5, d: 11, e: 8 }
