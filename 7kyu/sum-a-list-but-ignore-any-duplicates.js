@@ -10,6 +10,10 @@ function sumNoDuplicates(numList) {
     }, 0);
 }
 
+function sumNoDuplicates(numList) {
+    return numList.reduce((acc, curr) => acc + (numList.indexOf(curr) === numList.lastIndexOf(curr) ? curr : 0), 0);
+}
+
 console.log(sumNoDuplicates([1, 1, 2, 3])); // 5
 console.log(sumNoDuplicates([])); // 0
 console.log(sumNoDuplicates([1, 1, 2, 2, 3])); // 3
