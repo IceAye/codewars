@@ -12,6 +12,15 @@ function validParentheses(parenStr) {
     return stack.length === 0
 }
 
+function validParentheses(parenStr) {
+    let sum = 0;
+    for (const paren of parenStr) {
+        paren === '(' ? sum++ : sum--;
+        if (sum < 0) return false;
+    }
+    return sum === 0;
+}
+
 console.log(validParentheses("()")); // true
 console.log(validParentheses("((()))")); //  true,
 console.log(validParentheses("()()()")); // true
