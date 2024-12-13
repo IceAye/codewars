@@ -2,6 +2,10 @@ function consonantCount(str) {
     return str.replace(/[euioa\d\s^&$#_+-=\\\/.,|(){}[]/gi, "").length;
 }
 
+function consonantCount(str) {
+    return str.replace(/[^a-z]|[euioa]/gi, "").length;
+}
+
 console.log(consonantCount('')) // 0
 console.log(consonantCount('aeiouAEIOU')) // 0
 console.log(consonantCount('aaa')) // 0
