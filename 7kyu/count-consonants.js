@@ -1,11 +1,18 @@
+// ❓ DESCRIPTION:
+// Complete the function that takes a string of English-language text and returns the number of consonants in the string.
+// Consonants are all letters used to write English excluding the vowels a, e, i, o, u.
+//
+// ✅ SOLUTION 1:
 function consonantCount(str) {
     return str.replace(/[euioa\d\s^&$#_+-=\\\/.,|(){}[]/gi, "").length;
 }
 
+// ✅ SOLUTION 2:
 function consonantCount(str) {
     return str.replace(/[^a-z]|[euioa]/gi, "").length;
 }
 
+// 📌 TEASTCASE:
 console.log(consonantCount('')) // 0
 console.log(consonantCount('aeiouAEIOU')) // 0
 console.log(consonantCount('aaa')) // 0
