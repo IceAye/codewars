@@ -1,3 +1,10 @@
+// ❓ DESCRIPTION:
+// Every Friday and Saturday night, farmer counts sheep coming back to his farm (sheep returned on Friday stay and don't leave).
+// Sheep return in groups both of the days -> You will be given two arrays with these numbers (one for Friday and one for Saturday night). Array entries are integers, equal zero or higher - in case a given array is empty, farmer did not count the sheep or got sick (we treat this as no sheep returned that night).
+// Farmer knows how many sheep he has in total (third parameter). You need to calculate the amount of sheep lost (not returned to the farm) after final sheep count on Saturday.
+// Good luck! :-)
+//
+// ✅ SOLUTION 1:
 function lostSheep(friday, saturday, total) {
     function sum(array) {
         return array.reduce((acc, curr) => acc + curr, 0);
@@ -5,10 +12,12 @@ function lostSheep(friday, saturday, total) {
     return total - sum(friday) - sum(saturday);
 }
 
+// ✅ SOLUTION 2:
 function lostSheep(friday, saturday, total) {
     return [...friday, ...saturday].reduce((acc, curr) => acc - curr, total);
 }
 
+// 📌 TESTCASE:
 console.log(lostSheep([1,2],[3,4],15))  // 5
 console.log(lostSheep([3,1,2],[4,5],21))  // 6
 console.log(lostSheep([5,1,4],[5,4],29))  // 10
