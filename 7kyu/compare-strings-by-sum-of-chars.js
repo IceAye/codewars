@@ -1,3 +1,12 @@
+// ❓ DESCRIPTION:
+// Compare two strings by comparing the sum of their values (ASCII character code).
+//
+// For comparing treat all letters as UpperCase
+// null/NULL/Nil/None should be treated as empty strings
+// If the string contains other characters than letters, treat the whole string as it would be empty
+// Your method should return true, if the strings are equal and false if they are not equal.
+//
+// ✅ SOLUTION:
 function compare(s1, s2) {
     function preCompare(string) {
         if (/[^a-zA-Z]/gi.test(string) || string === null || string === "") {
@@ -8,6 +17,7 @@ function compare(s1, s2) {
     return preCompare(s1) === preCompare(s2)
 }
 
+// 📌 TESTCASE:
 console.log(compare("AD", "BC")) // true
 console.log(compare("AD", "DD")) // false
 console.log(compare("gf", "FG")) // true
