@@ -7,6 +7,11 @@ function validateWord(s) {
     return new Set(map.values()).size === 1;
 }
 
+function validateWord(s) {
+    let c = s.toLowerCase()
+    return c.length % new Set(c).size === 0
+}
+
 console.log(validateWord("abcabc")); // true
 console.log(validateWord("Abcabc")); // true
 console.log(validateWord("abc123")); // true
