@@ -11,6 +11,12 @@ const prevMultOfThree = (n) => {
     return n || null;
 };
 
+const prevMultOfThree = (n) => {
+    if (n === 0) return null;
+    if (n % 3 === 0) return n;
+    return prevMultOfThree(+n.toString().slice(0, -1))
+};
+
 console.log(prevMultOfThree(1)); // null
 console.log(prevMultOfThree(25)); // null
 console.log(prevMultOfThree(36)); // 36
