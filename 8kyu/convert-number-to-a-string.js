@@ -5,3 +5,7 @@ function numberToString(num) {
 function numberToString(num) {
     return '' + num;
 }
+
+function numberToString(num) {
+    return `${num}`;
+}
