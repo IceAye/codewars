@@ -1,6 +1,13 @@
 function covfefe(str) {
-    let newString = str.replace(/coverage/g, "covfefe");
+    let newString = str.replace(/coverage/g , "covfefe");
     return /coverage/g.test(str) ? newString : str + " covfefe";
+}
+
+function covfefe(str) {
+    if (str.includes("coverage")) {
+        return str.replaceAll("coverage" , "covfefe");
+    }
+    return str + " covfefe"
 }
 
 console.log(covfefe("coverage")); // "covfefe"
