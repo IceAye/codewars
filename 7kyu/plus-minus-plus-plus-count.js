@@ -1,3 +1,9 @@
+// ❓ DESCRIPTION:
+// Count how often sign changes in array.
+// number from 0 to ... . Empty array returns 0.
+//
+// ✅ SOLUTION:
+
 function catchSignChange(arr) {
     let count = 0;
     for (let i = 0; i < arr.length; i++) {
@@ -8,6 +14,7 @@ function catchSignChange(arr) {
     return count;
 }
 
+// 📌 TESTCASE:
 console.log(catchSignChange([])); // 0
 console.log(catchSignChange([1, 3, 4, 5])); // 0
 console.log(catchSignChange([-1, -3, -4, -5])); // 0
