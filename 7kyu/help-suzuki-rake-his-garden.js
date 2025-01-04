@@ -5,6 +5,10 @@ function rakeGarden(garden) {
         .join(" ");
 }
 
+function rakeGarden(garden) {
+    return garden.replace(/\b((?!\b(gravel|rock)\b)\w+)\b/g, 'gravel')
+}
+
 let garden1 =
     "slug spider rock gravel gravel gravel gravel gravel gravel gravel";
 console.log(rakeGarden(garden1)); // 'gravel gravel rock gravel gravel gravel gravel gravel gravel gravel'
