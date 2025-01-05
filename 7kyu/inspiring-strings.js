@@ -1,3 +1,8 @@
+// ❓ DESCRIPTION:
+// Given a string of space separated words, return the longest word.
+// If there are multiple longest words, return the rightmost longest word.
+//
+// ✅ SOLUTION:
 function longestWord(stringOfWords) {
     return stringOfWords.split(" ").reduce((max, curr) => {
         if (max.length <= curr.length) {
@@ -7,6 +12,7 @@ function longestWord(stringOfWords) {
     }, "");
 }
 
+// 📌 TESTCASE:
 console.log(longestWord("lonely")); //, 'lonely'
 console.log(longestWord("a pair")); //, 'pair'
 console.log(longestWord("a b c d e fgh")); //, 'fgh'
