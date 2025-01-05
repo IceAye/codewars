@@ -18,6 +18,15 @@ function getIssuer(number) {
     return "Unknown";
 }
 
+function getIssuer(n) {
+    let card = String(number);
+    if (/^3[4|7]\d{13}$/.test(card)) return "AMEX";
+    if (/^6011\d{12}$/.test(card)) return "Discover";
+    if (/^5[1-5]\d{14}$/.test(card)) return "Mastercard";
+    if (/^4(\d{12}|\d{15})$/.test(card)) return "VISA";
+    return "Unknown";
+}
+
 console.log(getIssuer(4111111111111111)); // "VISA"
 console.log(getIssuer(4111111111111)); // "VISA"
 console.log(getIssuer(4012888888881881)); // "VISA"
