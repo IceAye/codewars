@@ -12,6 +12,10 @@ function secondSymbol(s, symbol) {
     return -1;
 }
 
+function secondSymbol(s, symbol) {
+    return s.indexOf(symbol, s.indexOf(symbol) + 1);
+}
+
 console.log(secondSymbol("Hello world!!!", "l")); // 3
 console.log(secondSymbol("Hello world!!!", "o")); // 7
 console.log(secondSymbol("Hello world!!!", "A")); // -1
