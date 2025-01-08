@@ -1,3 +1,11 @@
+// ❓ DESCRIPTION:
+// Your job is to implement a function which returns the last D digits of an integer N as a list.
+//
+// Special cases:
+// If D > (the number of digits of N), return all the digits.
+// If D <= 0, return an empty list.
+//
+// ✅ SOLUTION:
 function lastDigit(n, d) {
     let array = Array.from(n.toString(), Number);
     if (d <= 0) {
@@ -9,6 +17,7 @@ function lastDigit(n, d) {
     }
 }
 
+// 📌 TESTCASE:
 console.log(lastDigit(1, 1)); // [1]
 console.log(lastDigit(123767, 4)); // [3,7,6,7]
 console.log(lastDigit(0, 1)); // [0]
