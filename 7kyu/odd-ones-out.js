@@ -9,6 +9,14 @@ function oddOnesOut(nums) {
     }, [])
 }
 
+function oddOnesOut(nums) {
+    let map = new Map()
+    for (const num of nums) {
+        map.set(num, map.get(num) + 1|| 1)
+    }
+    return nums.filter(num => map.get(num) % 2 === 0)
+}
+
 console.log(oddOnesOut([1, 2, 3, 1, 3, 3])) // [1, 1]
 console.log(oddOnesOut([75, 68, 75, 47, 68])) // [75, 68, 75, 68]
 console.log(oddOnesOut([42, 72, 32, 4, 94, 82, 67, 67])) // [67, 67]
