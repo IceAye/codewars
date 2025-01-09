@@ -22,6 +22,12 @@ const whosOnline = (friends) => {
     return obj;
 };
 
+const whosOnline = friends => friends.reduce((acc,{username, status, lastActivity}) => {
+    const friendStatus = status === 'online' && lastActivity > 10 ? 'away' : status;
+    acc[friendStatus] ? acc[friendStatus].push(username) : acc[friendStatus] = [username];
+    return acc;
+}, {})
+
 console.log(
     whosOnline([
         {
