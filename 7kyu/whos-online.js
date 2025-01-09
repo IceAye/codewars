@@ -1,3 +1,10 @@
+// ❓ DESCRIPTION:
+// You have a group chat application, but who is online!?
+// You want to show your users which of their friends are online and available to chat!
+// Given an input of an array of objects containing usernames, status and time since last activity (in mins), create a function to work out who is online, offline and away.
+// If someone is online but their lastActivity was more than 10 minutes ago they are to be considered away.
+//
+// ✅ SOLUTION 1:
 const whosOnline = (friends) => {
     let obj = {};
 
@@ -22,12 +29,14 @@ const whosOnline = (friends) => {
     return obj;
 };
 
+// ✅ SOLUTION 2:
 const whosOnline = friends => friends.reduce((acc,{username, status, lastActivity}) => {
     const friendStatus = status === 'online' && lastActivity > 10 ? 'away' : status;
     acc[friendStatus] ? acc[friendStatus].push(username) : acc[friendStatus] = [username];
     return acc;
 }, {})
 
+// 📌 TESTCASE:
 console.log(
     whosOnline([
         {
