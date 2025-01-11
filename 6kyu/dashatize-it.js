@@ -1,3 +1,7 @@
+// ❓ DESCRIPTION:
+// Given an integer, return a string with dash '-' marks before and after each odd digit, but do not begin or end the string with a dash mark.
+//
+// ✅ SOLUTION 1:
 function dashatize(num) {
     let digits = Array.from(Math.abs(num).toString(), Number);
     let result = "";
@@ -15,6 +19,7 @@ function dashatize(num) {
     return result.endsWith("-") ? result.slice(0, -1) : result;
 }
 
+// ✅ SOLUTION 2:
 function dashatize(num) {
     return Math.abs(num)
                .toString()
@@ -23,6 +28,7 @@ function dashatize(num) {
                .join("-");
 }
 
+// 📌 TESTCASE:
 console.log(dashatize(274)); // "2-7-4"
 console.log(dashatize(5311)); // "5-3-1-1"
 console.log(dashatize(5211)); // "5-3-1-1"
