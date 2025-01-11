@@ -15,6 +15,14 @@ function dashatize(num) {
     return result.endsWith("-") ? result.slice(0, -1) : result;
 }
 
+function dashatize(num) {
+    return Math.abs(num)
+               .toString()
+               .split(/([13579])/g)
+               .filter(Boolean)
+               .join("-");
+}
+
 console.log(dashatize(274)); // "2-7-4"
 console.log(dashatize(5311)); // "5-3-1-1"
 console.log(dashatize(5211)); // "5-3-1-1"
