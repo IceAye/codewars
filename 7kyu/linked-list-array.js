@@ -6,6 +6,14 @@ const listToArray = (list, result = []) => {
     return result;
 };
 
+function listToArray(list) {
+    let result = [];
+    do {
+        result.push(list.value);
+    } while (list = list.next);
+    return result;
+}
+
 const list1 = { value: 1, next: { value: 2, next: { value: 3, next: null } } };
 const list2 = { value: "foo", next: { value: "bar", next: null } };
 
