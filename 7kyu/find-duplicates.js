@@ -1,3 +1,8 @@
+// ❓ DESCRIPTION:
+// Given an array, find the duplicates in that array, and return a new array of those duplicates. The elements of the returned array should appear in the order when they first appeared as duplicates.
+// Note: numbers and their corresponding string representations should not be treated as duplicates (i.e., "1" != 1).
+//
+// ✅ SOLUTION 1:
 function duplicates(arr) {
     let result = [];
     let prefix = [];
@@ -12,10 +17,12 @@ function duplicates(arr) {
     return result;
 }
 
+// ✅ SOLUTION 2:
 function duplicates(arr) {
     return [...new Set(arr.filter((item, index) => arr.indexOf(item) !== index))];
 }
 
+// 📌 TESTCASE:
 console.log(duplicates([1, 2, 3, 4, 5])); // []
 console.log(duplicates([])); // []
 console.log(duplicates(["no", "duplicates", "here"])); // []
