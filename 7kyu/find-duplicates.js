@@ -12,6 +12,10 @@ function duplicates(arr) {
     return result;
 }
 
+function duplicates(arr) {
+    return [...new Set(arr.filter((item, index) => arr.indexOf(item) !== index))];
+}
+
 console.log(duplicates([1, 2, 3, 4, 5])); // []
 console.log(duplicates([])); // []
 console.log(duplicates(["no", "duplicates", "here"])); // []
