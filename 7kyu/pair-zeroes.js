@@ -15,6 +15,11 @@ function pairZeros(arr) {
     }, []);
 }
 
+function pairZeros(arr) {
+    let zeroes = 0;
+    return arr.filter((number) => number || zeroes++ % 2 === 0);
+}
+
 console.log(pairZeros([1])); // [1]
 console.log(pairZeros([0, 0])); // [0]
 console.log(pairZeros([0, 0, 0])); // [0,0]
