@@ -2,6 +2,10 @@ function isNegativeZero(n) {
     return n === 0 && 1 / n === -Infinity;
 }
 
+function isNegativeZero(n) {
+    return Object.is(n, -0);
+}
+
 console.log(isNegativeZero(-0)); // true
 console.log(isNegativeZero(-Infinity)); // false
 console.log(isNegativeZero(-5)); // false
