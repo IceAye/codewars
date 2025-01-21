@@ -17,6 +17,10 @@ function product(string) {
     return exlamationsCount * questionsCount;
 }
 
+function product(string) {
+    return (string.match(/!/g) || []).length * (string.match(/\?/g) || []).length;
+}
+
 console.log(product("")); // 0
 console.log(product("!")); // 0
 console.log(product("!!")); // 0
