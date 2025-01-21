@@ -10,6 +10,13 @@ function product(string) {
     return exlamationsCount * questionsCount;
 }
 
+function product(string) {
+    let exlamationsCount = string.split("!").length - 1;
+    let questionsCount = string.split("?").length - 1;
+
+    return exlamationsCount * questionsCount;
+}
+
 console.log(product("")); // 0
 console.log(product("!")); // 0
 console.log(product("!!")); // 0
