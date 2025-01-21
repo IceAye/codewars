@@ -1,3 +1,7 @@
+// ❓ DESCRIPTION:
+// Count the number of exclamation marks and question marks, return the product.
+//
+// ✅ SOLUTION 1:
 function product(string) {
     let exlamationsCount = 0;
     let questionsCount = 0;
@@ -10,6 +14,7 @@ function product(string) {
     return exlamationsCount * questionsCount;
 }
 
+// ✅ SOLUTION 2:
 function product(string) {
     let exlamationsCount = string.split("!").length - 1;
     let questionsCount = string.split("?").length - 1;
@@ -17,10 +22,12 @@ function product(string) {
     return exlamationsCount * questionsCount;
 }
 
+// ✅ SOLUTION 3:
 function product(string) {
     return (string.match(/!/g) || []).length * (string.match(/\?/g) || []).length;
 }
 
+// 📌 TESTCASE:
 console.log(product("")); // 0
 console.log(product("!")); // 0
 console.log(product("!!")); // 0
