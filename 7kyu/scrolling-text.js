@@ -1,3 +1,4 @@
+
 function scrollingText(text) {
     text = text.toUpperCase();
 
@@ -8,6 +9,16 @@ function scrollingText(text) {
         text = text.slice(1) + text[0];
         result.push(text);
         i++;
+    }
+
+    return result;
+}
+
+function scrollingText(text) {
+    let result = [];
+
+    for (let i = 0; i < text.length; i++) {
+        result.push((text.slice(i) + text.slice(0, i)).toUpperCase());
     }
 
     return result;
