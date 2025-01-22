@@ -5,6 +5,10 @@ function alphabetic(s) {
     return true;
 }
 
+function alphabetic(s) {
+    return s === s.split("").sort().join("");
+}
+
 console.log(alphabetic("asd")) // false
 console.log(alphabetic("codewars")) // false
 console.log(alphabetic("door")) // true
