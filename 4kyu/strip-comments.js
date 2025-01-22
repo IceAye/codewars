@@ -1,3 +1,7 @@
+// ❓ DESCRIPTION:
+// Complete the solution so that it strips all text that follows any of a set of comment markers passed in. Any whitespace at the end of the line should also be stripped out.
+//
+// ✅ SOLUTION:
 function solution(text, markers) {
 
     let array = text.split(/\n/);
@@ -10,6 +14,7 @@ function solution(text, markers) {
     }).join("\n");
 }
 
+// 📌 TESTCASE:
 console.log(solution("aa bb cc", [])); // 'aa bb cc'
 console.log(solution("aa bb cc  ", [])); // 'aa bb cc'
 console.log(solution("  aa bb cc", [])); // '  aa bb cc'
