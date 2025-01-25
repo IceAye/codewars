@@ -1,5 +1,12 @@
+// ❓ DESCRIPTION:
+// For this exercise you will be strengthening your page-fu mastery. You will complete the PaginationHelper class,
+// which is a utility class helpful for querying paging information related to an array.  The class is designed to take
+// in an array of values and an integer indicating how many items will be allowed per each page. The types of values
+// contained within the collection/array are not relevant.
+//
+// ✅ SOLUTION:
 class PaginationHelper {
-    constructor(collection, itemsPerPage) {
+    constructor(collection , itemsPerPage) {
         this.collection = collection;
         this.itemsPerPage = itemsPerPage;
     }
@@ -21,7 +28,7 @@ class PaginationHelper {
             this.itemsPerPage -
             Math.ceil(
                 (((pageIndex + 1) * this.itemsPerPage) % this.itemCount()) %
-                this.itemsPerPage,
+                this.itemsPerPage ,
             )
         );
     }
@@ -35,7 +42,8 @@ class PaginationHelper {
     }
 }
 
-const helper = new PaginationHelper(["a", "b", "c", "d", "e", "f"], 4);
+// 📌 TESTCASE:
+const helper = new PaginationHelper(["a" , "b" , "c" , "d" , "e" , "f"] , 4);
 console.log(helper.pageCount()); // should == 2
 console.log(helper.itemCount()); // should == 6
 console.log(helper.pageItemCount(0)); // should == 4
