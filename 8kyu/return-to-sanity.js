@@ -1,6 +1,5 @@
 function mystery() {
-    let results = {
+    return {
         sanity: 'Hello'
-    }
-    return results;
+    };
 }
