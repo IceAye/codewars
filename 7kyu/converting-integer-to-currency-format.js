@@ -14,6 +14,10 @@ function toCurrency(price) {
     return result.reverse().join("");
 }
 
+function toCurrency(price) {
+    return price.toLocaleString();
+}
+
 console.log(toCurrency(123456)); // "123,456"
 console.log(toCurrency(1234)); // "1,234"
 console.log(toCurrency(123)); // "123"
