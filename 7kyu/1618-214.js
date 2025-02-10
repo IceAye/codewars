@@ -1,3 +1,11 @@
+// ❓ DESCRIPTION:
+// For this kata you will have to forget how to add two numbers.
+// It can be best explained using the following meme:
+// Dayane Rivas adding up a sum while competing in the Guatemalan television show "Combate" in May 2016
+// In simple terms, our method does not like the principle of carrying over numbers and just writes down every number it calculates :-)
+// You may assume both integers are positive integers.
+//
+// ✅ SOLUTION:
 function add(num1, num2) {
     let result = [];
     let array1 = Array.from(num1.toString(), Number).reverse();
@@ -13,6 +21,7 @@ function add(num1, num2) {
     return result.reverse().join("");
 }
 
+// 📌 TESTCASE:
 console.log(add(2, 11)) // 13
 console.log(add(0, 1)) // 1
 console.log(add(0, 0)) // 0
