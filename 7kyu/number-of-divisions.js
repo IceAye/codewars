@@ -1,3 +1,7 @@
+// ❓ DESCRIPTION:
+// Calculate how many times a number can be divided by a given number.
+//
+// ✅ SOLUTION:
 const divisions = (n, divisor) => {
     let count = 0;
     while (n >= divisor) {
@@ -7,6 +11,7 @@ const divisions = (n, divisor) => {
     return count;
 };
 
+// 📌 TESTCASE:
 console.log(divisions(6, 2)) // 2
 console.log(divisions(100, 2)) // 6
 console.log(divisions(2450, 5)) // 4
