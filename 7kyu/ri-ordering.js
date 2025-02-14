@@ -1,3 +1,11 @@
+// ❓ DESCRIPTION:
+// There is a sentence that has a mistake in its ordering.
+// The part with a capital letter should be the first word.
+// Please write a function to re-order the words, so that the word starting with a capital letter is moved to the front.
+// Each word in the string is separated by a single space.
+// In the string, there will always be exactly one word with a capital letter in it.
+//
+// ✅ SOLUTION:
 function reOrdering(text) {
     let arr = text.split(" ");
     let result = [];
@@ -11,6 +19,7 @@ function reOrdering(text) {
     return result.join(" ");
 }
 
+// 📌 TESTCASE:
 console.log(reOrdering('ming Yao')) //  'Yao ming'
 console.log(reOrdering('Mano donowana')) //  'Mano donowana'
 console.log(reOrdering('wario LoBan hello')) //  'LoBan wario hello'
