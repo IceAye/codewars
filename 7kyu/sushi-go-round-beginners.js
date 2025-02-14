@@ -3,6 +3,11 @@ function totalBill(str) {
     return strLength * 2 - Math.floor(strLength / 5) * 2;
 }
 
+function totalBill(s) {
+    return s.replace(/ /g, "").replace(/r{5}/g, 'rrrr').length * 2;
+}
+
+
 console.log(totalBill("rr")); // 4
 console.log(totalBill("rr rrr")); // 8
 console.log(totalBill("rr rrr rrr rr")); // 16
