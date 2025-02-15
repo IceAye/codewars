@@ -1,3 +1,9 @@
+// ❓ DESCRIPTION:
+// Create a function that takes an array of letters, and combines them into words in a sentence.
+// The function should combine all the 0th indexed letters of each sub-array to create the word Just, all the 1st indexed letters of each sub-array to create the word Live, etc.
+// If a word is shorter than the maximum length, the remaining positions in the sub-array will contain empty strings (e.g., the last element in the last sub-array).
+//
+// ✅ SOLUTION:
 function arrAdder(arr) {
     let result = [];
     let i = 0;
@@ -13,6 +19,7 @@ function arrAdder(arr) {
     return result.join(" ");
 }
 
+// 📌 TESTCASE:
 console.log(arrAdder([['J', 'L', 'L', 'M'], ['u', 'i', 'i', 'a'], ['s', 'v', 'f', 'n'], ['t', 'e', 'e', '']])) // "Just Live Life Man"
 console.log(arrAdder([
     ['T', 'M', 'i', 't', 'p', 'o', 't', 'c'],
