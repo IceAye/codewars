@@ -29,7 +29,7 @@ function sayMeOperations(str) {
     return result.join(', ');
 }
 
-// 📌 TESTCASE:
+// 📌 TESTCASE :
 console.log(sayMeOperations("1 2 3 5 8")) // "addition, addition, addition"
 console.log(sayMeOperations("9 4 5 20 25")) // "subtraction, multiplication, addition"
 console.log(sayMeOperations("10 2 5 -3 -15 12")) // "division, subtraction, multiplication, subtraction"
