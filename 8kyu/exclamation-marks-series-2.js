@@ -5,3 +5,7 @@ function remove (string) {
     }
     return result
 }
+
+function remove(s){
+    return s.replace(/!+$/, '');
+}
