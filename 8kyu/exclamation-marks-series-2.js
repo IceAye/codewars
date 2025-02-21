@@ -1,3 +1,7 @@
+// ❓ DESCRIPTION:
+// Remove all exclamation marks from the end of sentence.
+//
+// ✅ SOLUTION 1:
 function remove (string) {
     let result = string
     while (result.endsWith("!")) {
@@ -6,6 +10,7 @@ function remove (string) {
     return result
 }
 
+// ✅ SOLUTION 2:
 function remove(s){
     return s.replace(/!+$/, '');
 }
