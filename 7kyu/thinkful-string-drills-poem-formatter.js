@@ -2,6 +2,10 @@ function formatPoem(poem) {
     return poem.split(". ").join(".\n");
 }
 
+function formatPoem(poem) {
+    return poem.replace(/\. /g, '.\n');
+}
+
 
 console.log(formatPoem('Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex. Complex is better than complicated.')) // 'Beautiful is better than ugly.\nExplicit is better than implicit.\nSimple is better than complex.\nComplex is better than complicated.'
 console.log(formatPoem("Flat is better than nested. Sparse is better than dense. Readability counts. Special cases aren't special enough to break the rules.")) // "Flat is better than nested.\nSparse is better than dense.\nReadability counts.\nSpecial cases aren't special enough to break the rules."
