@@ -6,6 +6,12 @@ function validateNumber(str) {
         : "Plenty more fish in the sea";
 }
 
+function validateNumber(str) {
+    return /^(\+44|0)7\d{9}$/g.test(str.replace(/-/g, ""))
+        ? "In with a chance"
+        : "Plenty more fish in the sea";
+}
+
 console.log(validateNumber("07454876120")); // 'In with a chance'
 console.log(validateNumber("0754876120")); // 'Plenty more fish in the sea'
 console.log(validateNumber("0745-487-61-20")); // 'In with a chance'
