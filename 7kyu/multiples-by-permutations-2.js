@@ -1,3 +1,8 @@
+// ❓ DESCRIPTION:
+// We have two consecutive integers, where k1 = k + 1.
+// We need to calculate the lowest strictly positive integer n, such that: the values n * k  and n * k1 have the same digits but in different order.
+//
+// ✅ SOLUTION:
 function findLowestInt(k) {
     let lowestInt = 1;
     while (
@@ -17,6 +22,7 @@ function findLowestInt(k) {
     return lowestInt;
 }
 
+// 📌 TESTCASE:
 console.log(findLowestInt(325)); // 477
 console.log(findLowestInt(599)); // 2394
 console.log(findLowestInt(855)); //  999
