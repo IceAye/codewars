@@ -7,6 +7,10 @@ function magnitude(vector) {
     );
 }
 
+function magnitude(vector) {
+    return Math.hypot(...vector);
+}
+
 var v1 = [0, 0];
 console.log(magnitude(v1)) // 0
 
