@@ -1,3 +1,15 @@
+// ❓ DESCRIPTION:
+// Your task is to get Zodiac Sign using input day and month.
+//
+// For example:
+// getZodiacSign(1,5) => 'Taurus'
+// getZodiacSign(10,10) => 'Libra'
+// Correct answers are (preloaded):
+//
+// const signs = ['Capricorn', 'Aquarius', 'Pisces', 'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius']
+// P.S. Each argument is correct integer number.
+//
+// ✅ SOLUTION:
 const getZodiacSign = (day, month) => {
     switch(month) {
         case 1:
@@ -26,6 +38,8 @@ const getZodiacSign = (day, month) => {
             return day > 21 ? 'Capricorn' : 'Sagittarius'
     }
 }
+
+// 📌 TESTCASE:
 console.log(getZodiacSign(10,10)) // 'Libra'
 console.log(getZodiacSign(1,5)) // 'Taurus'
 console.log(getZodiacSign(6,9)) // 'Virgo'
