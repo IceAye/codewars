@@ -20,6 +20,10 @@ function hiddenWord(num) {
     return result;
 }
 
+function hiddenWord(num) {
+    return num.toString().replace(/\d/g, char => 'oblietadnm'[char]);
+}
+
 console.log(hiddenWord(637)) // "aid"
 console.log(hiddenWord(7415)) // "debt"
 console.log(hiddenWord(49632)) // "email"
