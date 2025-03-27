@@ -10,6 +10,10 @@ function findUnique(numbers) {
     }
 }
 
+function findUnique(numbers) {
+    return numbers.reduce((a, b) => a ^ b);
+}
+
 console.log(findUnique([1, 8, 4, 4, 6, 1, 8])); // 6
 console.log(findUnique([1234567])); // 1234567
 console.log(findUnique([1, 4, 4, 5, 5, 3, 3, 2, 2])); // 1
