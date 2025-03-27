@@ -20,6 +20,10 @@ function findSuperMan(s) {
     return "Hi, SuperMan!";
 }
 
+function findSuperMan(s){
+    return /s.+u.+p.+e.+r.+m.+a.+n|n.+a.+m.+r.+e.+p.+u.+s/i.test(s) ? "Hi, SuperMan!" : "Are you crazy?";
+}
+
 console.log(findSuperMan("Hello, I am SuxpxexrxMxaxn")) // "Are you crazy?"
 console.log(findSuperMan("Hello, I am SxuxpxexrxMxaxn")) // "Hi, SuperMan!"
 console.log(findSuperMan("Hello, I am nxaxmxrxexpxuxs")) // "Hi, SuperMan!"
