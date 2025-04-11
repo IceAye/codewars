@@ -1,3 +1,8 @@
+// ❓ DESCRIPTION:
+// In this kata you will be given a sequence of the dimensions of rectangles ( sequence with width and length ) and circles ( radius - just a number ).
+// Your task is to return a new sequence of dimensions, sorted ascending by area.
+//
+// ✅SOLUTION 1:
 function sortByArea(array) {
     let result = new Map();
 
@@ -10,6 +15,7 @@ function sortByArea(array) {
     return [...result.keys()].sort((a, b) => result.get(a) - result.get(b));
 }
 
+// ✅ SOLUTION 2:
 function sortByArea(array) {
 
     function getArea(dimensions) {
@@ -19,6 +25,7 @@ function sortByArea(array) {
     return array.sort((a, b) => getArea(a) - getArea(b));
 }
 
+// 📌 TESTCASE:
 console.log(sortByArea([[4.23, 6.43], 1.23, 3.444, [1.342, 3.212]])); // [ [1.342, 3.212], 1.23, [4.23, 6.43], 3.444 ]
 console.log(sortByArea([[2, 5], 6])); // [ [2, 5], 6 ]
 console.log(sortByArea([])); // []
