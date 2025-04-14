@@ -4,6 +4,10 @@ function circleOfNumbers(n, firstNumber) {
     return opposite >= n ? opposite - n : opposite;
 }
 
+function circleOfNumbers(n, firstNumber) {
+    return (firstNumber + n / 2) % n;
+}
+
 console.log(circleOfNumbers(10,2) , 7)
 console.log(circleOfNumbers(10,7) , 2)
 console.log(circleOfNumbers(4,1) , 3)
