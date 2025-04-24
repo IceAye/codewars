@@ -1,3 +1,13 @@
+// ❓ DESCRIPTION:
+// Given an array/list [] of n integers , Arrange them in a way similar to the to-and-fro movement of a Pendulum
+//
+// The Smallest element of the list of integers , must come in center position of array/list.
+//
+// The Higher than smallest , goes to the right .
+// The Next higher number goes to the left of minimum number and So on , in a to-and-fro manner similar to that of a Pendulum.
+//
+// ✅ SOLUTION:
+
 function pendulum(values) {
     const result = [];
 
@@ -11,6 +21,7 @@ function pendulum(values) {
     return result;
 }
 
+// 📌 TESTCASE:
 console.log(pendulum([27,27,19,21,22,28,24])) // [28,27,22,19,21,24,27]
 console.log(pendulum([20,19,25,16,19,30,18,24])) // [25,20,19,16,18,19,24,30]
 console.log(pendulum([22,26,21,27,24,21,15,26,25])) // [27,26,24,21,15,21,22,25,26]
