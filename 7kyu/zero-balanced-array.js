@@ -12,6 +12,11 @@ function isZeroBalanced(n) {
     return n.length > 0 && sum === 0 && [...map.values()].every(item => item % 2 === 0);
 }
 
+function isZeroBalanced(n) {
+    let sum = n.reduce((acc, curr) => acc + curr, 0);
+    return n.length > 0 && sum === 0 && n.every(item => n.includes(-item));
+}
+
 console.log(isZeroBalanced([0, 0, 0, 0, 0, 0], true));
 console.log(isZeroBalanced([0, 1, -1], true));
 console.log(isZeroBalanced([0], true));
