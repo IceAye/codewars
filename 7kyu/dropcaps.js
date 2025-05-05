@@ -2,6 +2,10 @@ function dropCap(n) {
     return n.split(' ').map(word => word.length > 2 ? word[0].toUpperCase() + word.slice(1).toLowerCase() : word).join(' ');
 }
 
+function dropCap(n) {
+    return n.replace(/\S{3,}/g, w => w[0].toUpperCase() + w.slice(1).toLowerCase());
+}
+
 
 console.log(dropCap('Apple Banana'),"Apple Banana");
 console.log(dropCap('Apple'),"Apple");
