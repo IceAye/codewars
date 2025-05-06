@@ -1,3 +1,10 @@
+// ❓ DESCRIPTION:
+// Your task is to sort an array of integer numbers by the product of the value and the index of the positions.
+// For sorting the index starts at 1, NOT at 0!
+// The sorting has to be ascending.
+// The array will never be null and will always contain numbers.
+//
+// ✅ SOLUTION:
 function sortByValueAndIndex(array) {
     return array
         .map((el, ind) => [el * (ind + 1), el])
@@ -5,6 +12,7 @@ function sortByValueAndIndex(array) {
         .map((el) => el[1]);
 }
 
+// 📌 TESTCASE:
 console.log(sortByValueAndIndex([ 1, 2, 3, 4, 5 ])) // [ 1, 2, 3, 4, 5 ]
 console.log(sortByValueAndIndex([ 23, 2, 3, 4, 5 ])) // [ 2, 3, 4, 23, 5 ]
 console.log(sortByValueAndIndex([ 26, 2, 3, 4, 5 ])) // [ 2, 3, 4, 5, 26 ]
