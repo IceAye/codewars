@@ -2,6 +2,9 @@ function kebabize(str) {
     return str[0].toLowerCase() + str.slice(1).replace(/[A-Z]/g, c =>  `-${c.toLowerCase()}`).replace(/[0-9]/g, "")
 }
 
+function kebabize(str) {
+    return str.replace(/\d/g, "").split(/(?=[A-Z])/g).join('-').toLowerCase();
+}
 
 console.log(kebabize('MyCamelCasedString')) // 'my-camel-cased-string'
 console.log(kebabize('myCamelCasedString')) // 'my-camel-cased-string'
