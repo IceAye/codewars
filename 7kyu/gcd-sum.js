@@ -11,12 +11,17 @@
 //
 // Good luck!
 //
-// ✅ SOLUTION:
+// ✅ SOLUTION 1:
 function solve(s,g){
     for (let i = g; i <= s; i++) {
         if (i % g === 0 && (s - i) % g === 0) return [i, s - i];
     }
     return -1;
+}
+
+// ✅ SOLUTION 2:
+function solve(s,g){
+    return s % g ? - 1 : [g, s - g];
 }
 
 // 📌 TESTCASE:
