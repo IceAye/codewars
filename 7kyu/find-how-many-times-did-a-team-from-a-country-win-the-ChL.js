@@ -2,6 +2,10 @@ function countWins(winnerList, country) {
     return winnerList.reduce((acc, curr) => acc + (curr.country === country ? 1 : 0), 0);
 }
 
+function countWins(winnerList, country) {
+    return winnerList.filter(winner => winner.country === country).length;
+}
+
 const winnerList1 = [
     { season: '1996–97', team: 'Borussia Dortmund', country: 'Germany' },
     { season: '1997–98', team: 'Real Madrid', country: 'Spain' },
