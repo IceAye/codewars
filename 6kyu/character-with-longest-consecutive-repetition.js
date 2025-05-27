@@ -18,6 +18,20 @@ function longestRepetition(s) {
     return max;
 }
 
+function longestRepetition(s) {
+    const max = ['', 0];
+    if (s.length) {
+        let array = s.match(/(.)\1*/g);
+        for (const item of array) {
+            if (item.length > max[1]) {
+                max[0] = item[0];
+                max[1] = item.length;
+            }
+        }
+    }
+    return max;
+}
+
 console.log( longestRepetition("aaaabb"),      ["a",4] );
 console.log( longestRepetition("bbbaaabaaaa"), ["a",4] );
 console.log( longestRepetition("cbdeuuu900"),  ["u",3] );
