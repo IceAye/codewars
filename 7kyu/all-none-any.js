@@ -36,6 +36,19 @@ Array.prototype.any = function (p) {
     return false;
 };
 
+// ✅ SOLUTION 2:
+Array.prototype.all = function (p) {
+    return this.filter(item => p(item)).length === this.length;
+};
+
+Array.prototype.none = function (p) {
+    return this.filter(item => !p(item)).length === this.length;
+};
+
+Array.prototype.any = function (p) {
+    return this.filter(item => p(item)).length > 0;
+};
+
 // 📌 TESTCASE:
 function isGreaterThanZero(num) {
     return num > 0;
