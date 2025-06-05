@@ -4,6 +4,12 @@ function singleDigit(n) {
     return singleDigit(binary);
 }
 
+function singleDigit(n) {
+    while(n > 9){
+        n = n.toString(2).replace(/0/g, "").length;
+    }
+    return n;
+}
 
 console.log(singleDigit(5), 5)
 console.log(singleDigit(999), 8)
