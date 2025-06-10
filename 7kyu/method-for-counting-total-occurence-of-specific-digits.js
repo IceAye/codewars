@@ -17,6 +17,12 @@ function List(){
     }
 }
 
+function List(){
+    this.countSpecDigits = function(integersList, digitsList) {
+        return digitsList.map(digit => [digit, integersList.toString().split(digit).length - 1]);
+    }
+}
+
 let l = new List();
 
 console.log(l.countSpecDigits([1, 1, 2, 3, 1, 2, 3, 4], [1, 3]),[[1, 3], [3, 2]]);
