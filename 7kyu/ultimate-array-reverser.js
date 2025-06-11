@@ -1,3 +1,12 @@
+// ❓ DESCRIPTION:
+// Given an array of strings, reverse them and their order in such way that their length stays the same as the length of the original inputs.
+//
+// Example:
+// Input:  {"I", "like", "big", "butts", "and", "I", "cannot", "lie!"}
+// Output: {"!", "eilt", "onn", "acIdn", "ast", "t", "ubgibe", "kilI"}
+// Good luck!
+//
+// ✅ SOLUTION:
 function ultimateReverse(s) {
     const reversedStrings = [...s.join('')].reverse().join('');
     let acc = '';
@@ -10,6 +19,7 @@ function ultimateReverse(s) {
     return result;
 }
 
+// 📌 TESTCASE:
 console.log(
     ultimateReverse(["I", "like", "big", "butts", "and", "I", "cannot", "lie!"]),
     ["!", "eilt", "onn", "acIdn", "ast", "t", "ubgibe", "kilI"]
