@@ -1,5 +1,17 @@
+// ❓ DESCRIPTION:
+// Task
+// Write a method remainder which takes two integer arguments, dividend and divisor, and returns the remainder when dividend is divided by divisor. Do NOT use the modulus operator (%) to calculate the remainder!
+//
+// Assumption
+// Dividend will always be greater than or equal to divisor.
+//
+// Notes
+// Make sure that the implemented remainder function works exactly the same as the Modulus operator (%).
+//
+// ✅ SOLUTION:
 const remainder = (D, d) => D - d * Math.floor(D / d);
 
+// 📌 TESTCASE:
 console.log( remainder(3,2), 1);
 console.log( remainder(19,2), 1);
 console.log( remainder(10,2), 0);
