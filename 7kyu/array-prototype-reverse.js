@@ -12,6 +12,16 @@ Array.prototype.reverse = function() {
     return this;
 };
 
+Array.prototype.reverse = function() {
+    let i = 0;
+    let j = this.length - 1;
+    while (i < Math.floor(this.length / 2)) {
+        [this[i], this[j]] = [this[j], this[i]];
+        i++;
+        j--;
+    }
+    return this;
+};
 
 console.log([1, 2, 3, 4].reverse(), [4,3,2,1]);
 console.log(["a", "b", "c"].reverse(), ["c", "b", "a"]);
