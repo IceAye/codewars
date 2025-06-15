@@ -1,3 +1,16 @@
+// ❓ DESCRIPTION:
+// The function takes cents value (int) and needs to return the minimum number of coins combination of the same value.
+//
+// The function should return an array where
+// coins[0] = pennies ==> $00.01
+// coins[1] = nickels ==> $00.05
+// coins[2] = dimes ==> $00.10
+// coins[3] = quarters ==> $00.25
+//
+// So for example:
+// coinCombo(6) --> [1, 1, 0, 0]
+//
+// ✅ SOLUTION 1:
 function coinCombo(cents) {
     const quarters = Math.floor(cents / 25);
     const dimes = Math.floor((cents - quarters * 25) / 10);
@@ -6,6 +19,7 @@ function coinCombo(cents) {
     return [pennies, nickels, dimes, quarters];
 }
 
+// ✅ SOLUTION 2:
 function coinCombo(cents) {
     let coins = [1,5,10,25];
     let counts = [0,0,0,0];
@@ -16,6 +30,7 @@ function coinCombo(cents) {
     return counts;
 }
 
+// 📌 TESTCASE:
 console.log(coinCombo(1, [1, 0, 0, 0]));
 console.log(coinCombo(2, [2, 0, 0, 0]));
 console.log(coinCombo(5, [0, 1, 0, 0]));
