@@ -6,6 +6,16 @@ function coinCombo(cents) {
     return [pennies, nickels, dimes, quarters];
 }
 
+function coinCombo(cents) {
+    let coins = [1,5,10,25];
+    let counts = [0,0,0,0];
+    for (let i = 3; i >= 0; i--) {
+        counts[i] = Math.floor(cents / coins[i]);
+        cents -= counts[i] * coins[i];
+    }
+    return counts;
+}
+
 console.log(coinCombo(1, [1, 0, 0, 0]));
 console.log(coinCombo(2, [2, 0, 0, 0]));
 console.log(coinCombo(5, [0, 1, 0, 0]));
