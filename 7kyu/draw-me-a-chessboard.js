@@ -1,3 +1,12 @@
+// ❓ DESCRIPTION:
+// A grid is a perfect starting point for many games (Chess, battleships, Candy Crush!).
+// Making a digital chessboard I think is an interesting way of visualising how loops can work together.
+// Your task is to write a function that takes two integers rows and columns and returns a chessboard pattern as a two dimensional array.
+// The white spaces should be represented by an: 'O'
+// and the black an: 'X'
+// The first row should always start with a white space 'O'
+//
+// ✅ SOLUTION:
 function chessBoard(rows, columns) {
     const grid = [];
     for (let i = 0; i < rows; i++) {
@@ -14,6 +23,7 @@ function chessBoard(rows, columns) {
     return grid;
 }
 
+// 📌 TESTCASE:
 console.log(chessBoard(6,4))
 // [
 //     ["O","X","O","X"],
