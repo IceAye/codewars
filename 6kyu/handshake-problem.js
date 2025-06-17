@@ -16,6 +16,16 @@ function getParticipants(handshakes) {
     return n;
 }
 
+function getParticipants(handshakes) {
+    let n = 0;
+
+    while (handshakes > n * (n - 1) / 2) {
+        n++;
+    }
+
+    return n;
+}
+
 console.log(getParticipants(0), 0);
 console.log(getParticipants(1), 2);
 console.log(getParticipants(3), 3);
