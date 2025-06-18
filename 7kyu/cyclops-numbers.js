@@ -5,6 +5,11 @@ function cyclops(n) {
     return isOddLength  && isZeroCenter && binary.match(/0/g).length === 1;
 }
 
+function cyclops(n) {
+    const binary = n.toString(2).split('0');
+    return binary.length === 2 && binary[0] === binary[1];
+}
+
 console.log(cyclops(1), false);
 console.log(cyclops(5), true);
 console.log(cyclops(3), false);
