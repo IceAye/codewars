@@ -1,3 +1,12 @@
+// ❓ DESCRIPTION:
+// Your job is to create a calculator which evaluates expressions in Reverse Polish notation.
+// For example expression 5 1 2 + 4 * + 3 - (which is equivalent to 5 + ((1 + 2) * 4) - 3 in normal notation) should evaluate to 14.
+// For your convenience, the input is formatted such that a space is provided between every token.
+// Empty expression should evaluate to 0.
+// Valid operations are +, -, *, /.
+// You may assume that there won't be exceptional situations (like stack underflow or division by zero).
+//
+// ✅ SOLUTION:
 function calc(expr) {
     const stack = [];
     const arr = expr.split(" ");
@@ -30,6 +39,7 @@ function calc(expr) {
     return stack[0];
 }
 
+// 📌 TESTCASE:
 console.log(calc(''), 0)
 console.log(calc('3'), 3)
 console.log(calc('3.5'), 3.5)
