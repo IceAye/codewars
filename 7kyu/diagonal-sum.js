@@ -7,6 +7,10 @@ function sum(matrix) {
     return sum;
 }
 
+function sum(matrix) {
+    return matrix.reduce((acc, curr, ind) => acc + curr[ind] + curr[matrix.length - 1 - ind], 0 );
+}
+
 console.log(sum([]), 0);
 console.log(sum([[4]]), 8);
 console.log(sum([[1,2], [3,4]]), 1 + 2 + 3 + 4);
