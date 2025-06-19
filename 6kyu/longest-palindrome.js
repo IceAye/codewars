@@ -1,3 +1,10 @@
+// ❓ DESCRIPTION:
+// Longest Palindrome
+// Find the length of the longest substring in the given string s that is the same in reverse.
+// As an example, if the input was “I like racecars that go fast”, the substring (racecar) length would be 7.
+// If the length of the input string is 0, the return value must be 0.
+//
+// ✅ SOLUTION:
 function longestPalindrome(s) {
     if (!s) return 0;
     for (let c = s.length; c > 0; c--) {
@@ -8,6 +15,7 @@ function longestPalindrome(s) {
     }
 }
 
+// 📌 TESTCASE:
 console.log(longestPalindrome("a"), 1);
 console.log(longestPalindrome("aa"), 2);
 console.log(longestPalindrome("baa"), 2);
