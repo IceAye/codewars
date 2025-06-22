@@ -1,7 +1,13 @@
+// ❓ DESCRIPTION:
+// Let's assume we need "clean" strings. Clean means a string should only contain letters a-z, A-Z and spaces. We assume that there are no double spaces or line breaks.
+// Write a function that takes a string and returns a string without the unnecessary characters.
+//
+// ✅ SOLUTION:
 function removeChars(s) {
     return s.replace(/[^a-z\s]/gi, '');
 }
 
+// 📌 TESTCASE:
 console.log(removeChars(".tree1"),'tree')
 console.log(removeChars("that's a pie&ce o_f p#ie!"),'thats a piece of pie')
 console.log(removeChars('john.dope@dopington.com'), 'johndopedopingtoncom')
