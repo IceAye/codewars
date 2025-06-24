@@ -1,3 +1,10 @@
+// ❓ DESCRIPTION:
+// Run-length encoding (RLE) is a very simple form of data compression in which runs of data (that is, sequences in which the same data value occurs in many consecutive data elements) are stored as a single data value and count, rather than as the original run. Wikipedia
+//
+// Task
+// Your task is to write such a run-length encoding. For a given string, return a list (or array) of pairs (or arrays) [ (i1, s1), (i2, s2), …, (in, sn) ], such that one can reconstruct the original string by replicating the character sx ix times and concatening all those strings. Your run-length encoding should be minimal, ie. for all i the values si and si+1 should differ.
+//
+// ✅ SOLUTION 1:
 const runLengthEncoding = function(str){
     if (str.length === 0) return [];
 
@@ -19,6 +26,7 @@ const runLengthEncoding = function(str){
     return result;
 }
 
+// ✅ SOLUTION 2:
 const runLengthEncoding = function(str){
     return (str.match(/(.)\1*/g) || []).reduce((acc, curr) => {
         acc.push([curr.length, curr[0]]);
@@ -26,7 +34,7 @@ const runLengthEncoding = function(str){
     }, []);
 }
 
-
+// 📌 TESTCASE:
 console.log(runLengthEncoding(""), []);
 console.log(runLengthEncoding("abc"), [[1,'a'],[1,'b'],[1,'c']]);
 console.log(runLengthEncoding("aab"), [[2,'a'],[1,'b']]);
