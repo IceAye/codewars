@@ -19,6 +19,14 @@ const runLengthEncoding = function(str){
     return result;
 }
 
+const runLengthEncoding = function(str){
+    return (str.match(/(.)\1*/g) || []).reduce((acc, curr) => {
+        acc.push([curr.length, curr[0]]);
+        return acc;
+    }, []);
+}
+
+
 console.log(runLengthEncoding(""), []);
 console.log(runLengthEncoding("abc"), [[1,'a'],[1,'b'],[1,'c']]);
 console.log(runLengthEncoding("aab"), [[2,'a'],[1,'b']]);
