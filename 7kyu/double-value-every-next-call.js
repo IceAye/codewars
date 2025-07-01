@@ -1,3 +1,8 @@
+// ❓ DESCRIPTION:
+// This kata is about static method that should return different values.
+// On the first call it must be 1, on the second and others - it must be a double from previous value.
+//
+// ✅ SOLUTION:
 class Class {
     static number = 1;
 
@@ -8,6 +13,7 @@ class Class {
     }
 }
 
+// 📌 TESTCASE:
 console.log(Class.getNumber(),  1, "1st call should return 1");
 console.log(Class.getNumber(),  2, "2nd call should return 2");
 console.log(Class.getNumber(),  4, "3rd call should return 4");
