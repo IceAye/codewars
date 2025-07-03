@@ -27,6 +27,14 @@ function getOrder(input) {
     return output.join(" ");
 }
 
+function getOrder(input) {
+    const menu = ["Burger", "Fries", "Chicken", "Pizza", "Sandwich", "Onionrings", "Milkshake", "Coke"];
+    const correctMenuItem = (item) => item[0].toUpperCase() + item.slice(1);
+    const correctOrder = (a, b) => menu.indexOf(a) - menu.indexOf(b);
+
+    return input.match(new RegExp(menu.join("|"), "gi")).map(item => correctMenuItem(item)).sort(correctOrder).join(" ");
+}
+
 console.log(
     getOrder("milkshakepizzachickenfriescokeburgerpizzasandwichmilkshakepizza"),
     "Burger Fries Chicken Pizza Pizza Pizza Sandwich Milkshake Milkshake Coke",
