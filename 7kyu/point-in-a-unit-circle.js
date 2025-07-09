@@ -2,6 +2,10 @@ function pointInCircle(x, y) {
     return x * x + y * y < 1;
 }
 
+function pointInCircle(x, y) {
+    return Math.hypot(x, y) < 1;
+}
+
 console.log(pointInCircle(0, 0), "Origin is inside");
 console.log(pointInCircle(2, 0), "(2, 0) is outside");
 console.log(pointInCircle(0, 0.9), "(0, 0.9) is inside");
