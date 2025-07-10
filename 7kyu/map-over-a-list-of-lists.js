@@ -1,7 +1,12 @@
+// ❓ DESCRIPTION:
+// Write a function which maps a function over the lists in a list:
+
+// ✅ SOLUTION:
 function gridMap(fn,a) {
     return a.map(row => row.map(item => fn(item)));
 }
 
+// 📌 TESTCASE:
 const numberGrid = [ [1,2,3,4]
     , [5,6,7,8,9]
     , [0,2,4]
