@@ -14,7 +14,7 @@
 //
 // Your return value will be a string containing the combination of Fizz, Buzz, Cuckoo, and/or tick sounds that the clock needs to make at that time, separated by spaces. Note that although the input is in 24-hour time, cuckoo clocks' cuckoos are in 12-hour time.
 
-// ✅ SOLUTION:
+// ✅ SOLUTION 1:
 function fizzBuzzCuckooClock(time) {
     if (time.endsWith('00')) {
         const repetition = [];
@@ -45,6 +45,22 @@ function fizzBuzzCuckooClock(time) {
     }
 
     return 'tick';
+}
+
+// ✅ SOLUTION 2:
+function fizzBuzzCuckooClock(time) {
+    let [hour, minute] = time.split(':');
+    return minute == 0
+           ? 'Cuckoo '.repeat(hour % 12 || 12).trim()
+           : minute == 30
+             ? 'Cuckoo'
+             : minute % 15 == 0
+               ? 'Fizz Buzz'
+               : minute % 3 == 0
+                 ? 'Fizz'
+                 : minute % 5 == 0
+                   ? 'Buzz'
+                   : 'tick';
 }
 
 // 📌 TESTCASE:
