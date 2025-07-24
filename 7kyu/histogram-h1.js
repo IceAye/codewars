@@ -12,7 +12,7 @@
 // Task
 // You will be passed the dice value frequencies, and your task is to write the code to return a string representing a histogram, so that when it is printed it has the same format as the example.
 
-// ✅ SOLUTION:
+// ✅ SOLUTION 1:
 function histogram(results) {
     let histogram = '';
     let i = results.length - 1;
@@ -23,6 +23,11 @@ function histogram(results) {
         i--;
     }
     return histogram;
+}
+
+// ✅ SOLUTION 2:
+function histogram(results) {
+    return results.reduce((acc, curr, ind) => (ind + 1) + '|' + (curr ? '#'.repeat(curr) + ' ' + curr : '') + '\n' + acc, '');
 }
 
 // 📌 TESTCASE:
