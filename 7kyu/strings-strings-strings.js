@@ -1,3 +1,4 @@
+// SOLUTION 1:
 Boolean.prototype.toString = function() {
     return '' + this;
 }
@@ -8,6 +9,19 @@ Number.prototype.toString = function() {
 
 Array.prototype.toString = function() {
     return `[${this.join(',')}]`;
+}
+
+// SOLUTION 2:
+Boolean.prototype.toString = function() {
+    return JSON.stringify(this);
+}
+
+Number.prototype.toString = function() {
+    return JSON.stringify(this);
+}
+
+Array.prototype.toString = function() {
+    return JSON.stringify(this);
 }
 
 console.log((123).toString(), "123");
