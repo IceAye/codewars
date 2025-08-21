@@ -6,6 +6,11 @@ Foo.prototype.valueOf = function() {
     return this.val;
 }
 
+
+const Foo = function(value) {
+    return new Number(value);
+}
+
 console.log(new Foo(2) + new Foo(3), 5);
 console.log(new Foo(-2) + new Foo(3), 1);
 console.log(new Foo(-21) + new Foo(-7), -28);
