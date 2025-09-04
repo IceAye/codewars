@@ -1,3 +1,10 @@
+// ❓ DESCRIPTION:
+// Given a number and a binary tree ( not a Binary Search Tree! ):
+// return True/true if the given number is in the tree
+// return False/false if it isn't
+// Each node in the binary tree is either of this Node class or null
+
+// ✅ SOLUTION:
 class Node {
     constructor(value, left = null, right = null) {
         this.value = value;
@@ -11,8 +18,7 @@ function search(n, root) {
     return search(n, root.left) || search(n, root.right);
 }
 
-
-
+// 📌 TESTCASE:
 console.log(search(666, null), false);
 
 const root1 = new Node(666, new Node(555), new Node(444));
