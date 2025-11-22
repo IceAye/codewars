@@ -1,3 +1,8 @@
+// ❓ DESCRIPTION:
+// You have to write a function which creates the following pattern (See Examples) upto desired number of rows.
+// If the Argument is 0 or a Negative Integer then it should return "" i.e. empty string.
+
+// ✅ SOLUTION:
 function pattern(n){
     if (n <= 0) return '';
     const result = [];
@@ -12,4 +17,5 @@ function pattern(n){
     return result.join('\n');
 }
 
+// 📌 TESTCASE:
 console.log(pattern(4), "1234\n2341\n3412\n4123")
